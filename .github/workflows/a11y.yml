@@ -1,0 +1,33 @@
+name: Audit accessibilité RGAA/WCAG
+on:
+  push: { branches: [main] }
+  pull_request:
+  schedule: [{ cron: '0 5 * * 1' }]
+  workflow_dispatch:
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - run: npm install
+      - run: npx playwright install --with-deps chromium
+      # Si le site est bâti dans ce repo : ajouter build + démarrage local, puis START_URL=http://localhost:3000
+      - name: Scan axe-core
+        run: node scripts/scan.js
+        env: { START_URL: '${{ vars.START_URL }}' }
+      - name: Rapport (échec si violations bloquantes ou régressions)
+        id: report
+        run: node scripts/report.js
+        continue-on-error: true
+      - name: Corrections IA (optionnel, secret MISTRAL_API_KEY)
+        run: node scripts/ai-fix.js
+        env: { MISTRAL_API_KEY: '${{ secrets.MISTRAL_API_KEY }}' }
+      - run: node scripts/legal.js
+      - uses: actions/upload-artifact@v4
+        with: { name: rapport-rgaa, path: results/ }
+      - name: Valider
+        if: steps.report.outcome == 'failure'
+        run: exit 1

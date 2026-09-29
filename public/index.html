@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Plateforme d'audit d'accessibilité numérique RGAA 4.1 et WCAG 2.2 — Sécurisez votre conformité légale">
+  <title>RGAA Audit — Sécurisation & Conformité Accessibilité</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <!-- Skip to content -->
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+  <!-- Bandeau Marketing & Sécurité Juridique -->
+  <aside class="marketing-topbar" aria-label="Informations de conformité légale">
+    <div>
+      🛡️ <strong>Loi Accessibilité & Décret 2019-768 :</strong> Évitez jusqu'à <strong>25 000 € d'amende</strong> par site et par an en publiant vos documents conformes.
+    </div>
+    <div class="marketing-badges">
+      <span class="pill-badge highlight">Sanctions évitées</span>
+      <span class="pill-badge">RGAA 4.1 & WCAG 2.2</span>
+      <span class="pill-badge">100% Automatisé</span>
+    </div>
+  </aside>
+
+  <!-- Région live pour les annonces dynamiques -->
+  <div id="live-region" class="visually-hidden-live" aria-live="polite" aria-atomic="true"></div>
+
+  <div class="app-layout">
+    <!-- Header -->
+    <header class="app-header" role="banner">
+      <div style="display:flex;align-items:center;gap:0.75rem">
+        <button class="menu-toggle" aria-label="Ouvrir le menu de navigation" aria-expanded="false" id="menu-toggle">
+          ☰
+        </button>
+        <h1>
+          <span class="brand-emblem" aria-hidden="true">A11Y</span>
+          RGAA Audit Pro
+        </h1>
+      </div>
+      <div class="header-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Basculer le thème clair/sombre" title="Basculer le thème">
+          Thème
+        </button>
+      </div>
+    </header>
+
+    <!-- Sidebar Navigation -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+    <nav class="app-sidebar" id="sidebar" aria-label="Navigation principale">
+      <div class="nav-section-title">Navigation</div>
+      <ul class="nav-list" role="list">
+        <li class="nav-item">
+          <a href="#dashboard" class="active" data-page="dashboard">
+            <svg class="nav-svg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg>
+            Tableau de bord
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#audit" data-page="audit">
+            <svg class="nav-svg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+            Nouvel audit
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#results" data-page="results">
+            <svg class="nav-svg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
+            Résultats
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#fixes" data-page="fixes">
+            <svg class="nav-svg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
+            Corrections IA
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#legal" data-page="legal">
+            <svg class="nav-svg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+            Documents légaux
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#checklist" data-page="checklist">
+            <svg class="nav-svg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            Checklist manuel
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#about" data-page="about">
+            <svg class="nav-svg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+            À propos & Spécifications
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="app-main" id="main-content">
+      <!-- === PAGE: Dashboard === -->
+      <section id="page-dashboard" class="page active" aria-labelledby="title-dashboard">
+        <!-- Hero Banner Marketing -->
+        <div class="hero-banner">
+          <span class="hero-banner-tag">Sécurité Juridique & ROI</span>
+          <h3>Protégez votre organisme contre les sanctions d'accessibilité</h3>
+          <p>Auditez votre site en 1 clic, détectez immédiatement les non-conformités RGAA 4.1 / WCAG et générez vos déclarations obligatoires pour éviter jusqu'à 25 000 € d'amende.</p>
+          <div class="hero-stats-row">
+            <div class="hero-stat-item">
+              <span class="hero-stat-number">25 000 €</span>
+              <span class="hero-stat-desc">Amende annuelle maximale évitée</span>
+            </div>
+            <div class="hero-stat-item">
+              <span class="hero-stat-number">&lt; 60 s</span>
+              <span class="hero-stat-desc">Temps d'audit moyen en 1 clic</span>
+            </div>
+            <div class="hero-stat-item">
+              <span class="hero-stat-number">106 Critères</span>
+              <span class="hero-stat-desc">Référentiel RGAA 4.1 intégré</span>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="page-title" id="title-dashboard">Tableau de bord</h2>
+        <div id="dashboard-content">
+          <div class="empty-state">
+            <p style="font-size:1.1rem;font-weight:600;margin-bottom:0.5rem">Aucun audit n'a encore été réalisé sur ce site.</p>
+            <p class="text-sm text-muted mb-lg">Renseignez l'URL de votre site pour générer votre premier diagnostic de conformité et vos documents légaux.</p>
+            <a href="#audit" class="btn btn-primary" data-page="audit">Lancer un audit en 1 clic</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- === PAGE: Nouvel Audit === -->
+      <section id="page-audit" class="page" aria-labelledby="title-audit" style="display:none">
+        <h2 class="page-title" id="title-audit">Lancer un audit RGAA</h2>
+        
+        <div class="alert alert-info mb-lg">
+          <strong>Seule l'URL est nécessaire :</strong> Renseignez simplement l'adresse de votre site ci-dessous et lancez le scan. Les paramètres avancés ont déjà des valeurs optimales par défaut.
+        </div>
+
+        <form id="audit-form" class="card" novalidate>
+          <div class="form-group" style="margin-bottom:1.5rem">
+            <label class="form-label" for="start-url" style="font-size:1.1rem;font-weight:700">
+              🌐 URL du site à auditer <span aria-hidden="true" style="color:var(--red-error)">*</span>
+            </label>
+            <span class="form-hint" id="url-hint">Exemple : https://www.mon-site.fr</span>
+            <input type="url" id="start-url" class="form-input" required placeholder="https://mon-site.fr" aria-describedby="url-hint" autocomplete="url" style="font-size:1.1rem;padding:0.75rem 1rem">
+          </div>
+
+          <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
+            <button type="submit" class="btn btn-primary" id="btn-scan" style="font-size:1.1rem;padding:0.75rem 1.75rem">
+              🚀 Lancer le scan
+            </button>
+            <span id="scan-status" class="text-muted text-sm" aria-live="polite"></span>
+          </div>
+
+          <!-- Options avancées & Organisation dépliables -->
+          <details class="mt-lg" style="border-top:1px solid var(--border-color);padding-top:1rem">
+            <summary class="btn btn-secondary btn-sm" style="cursor:pointer;display:inline-flex;list-style:none">
+              ⚙️ Paramètres avancés & Organisation (facultatif)
+            </summary>
+            
+            <div class="mt-md" style="padding:1rem;background:var(--bg-secondary);border-radius:var(--radius-md)">
+              <fieldset>
+                <legend class="card-title" style="font-size:1rem;margin-bottom:0.75rem">Options de crawl</legend>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label" for="max-pages">Nombre max de pages à explorer</label>
+                    <input type="number" id="max-pages" class="form-input" value="30" min="1" max="200">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="same-origin">Restreindre au même domaine</label>
+                    <select id="same-origin" class="form-select">
+                      <option value="true" selected>Oui (recommandé)</option>
+                      <option value="false">Non</option>
+                    </select>
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset class="mt-md">
+                <legend class="card-title" style="font-size:1rem;margin-bottom:0.75rem">Informations pour les documents légaux (facultatif)</legend>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label" for="org-nom">Nom de l'organisation</label>
+                    <input type="text" id="org-nom" class="form-input" placeholder="Ex: Université Côte d'Azur">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="org-site">Nom du site web</label>
+                    <input type="text" id="org-site" class="form-input" placeholder="Ex: Portail des formations">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label" for="org-email">Email de contact accessibilité</label>
+                    <input type="email" id="org-email" class="form-input" placeholder="contact@example.com" autocomplete="email">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="org-adresse">Adresse postale</label>
+                    <input type="text" id="org-adresse" class="form-input" placeholder="Adresse complète">
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </details>
+        </form>
+
+        <!-- Zone de progression du scan -->
+        <div id="scan-progress" class="card mt-lg" style="display:none">
+          <h3 class="card-title">Progression du scan</h3>
+          <div class="progress-bar mt-md mb-md">
+            <div class="progress-fill" id="scan-progress-bar" style="width:0%" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <p id="scan-progress-text" class="text-sm text-muted" aria-live="polite">En attente…</p>
+          <div class="scan-log mt-md" id="scan-log" role="log" aria-label="Journal du scan"></div>
+        </div>
+      </section>
+
+      <!-- === PAGE: Résultats === -->
+      <section id="page-results" class="page" aria-labelledby="title-results" style="display:none">
+        <h2 class="page-title" id="title-results">Résultats de l'audit</h2>
+        <div id="results-content">
+          <div class="empty-state">
+            <p style="font-size:1.1rem;font-weight:600">Aucun résultat disponible pour l'instant.</p>
+            <p class="text-sm text-muted mb-lg">Lancez un audit pour générer la cartographie des non-conformités.</p>
+            <a href="#audit" class="btn btn-primary" data-page="audit">Lancer un audit</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- === PAGE: Corrections IA === -->
+      <section id="page-fixes" class="page" aria-labelledby="title-fixes" style="display:none">
+        <h2 class="page-title" id="title-fixes">Corrections assistées par IA</h2>
+        <div id="fixes-content">
+          <div class="empty-state">
+            <p style="font-size:1.1rem;font-weight:600">Aucune suggestion disponible.</p>
+            <p class="text-sm text-muted mb-lg">Lancez d'abord un audit pour générer des prompts de correction ciblés pour vos développeurs.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- === PAGE: Documents Légaux === -->
+      <section id="page-legal" class="page" aria-labelledby="title-legal" style="display:none">
+        <h2 class="page-title" id="title-legal">Documents légaux obligatoires</h2>
+        <div id="legal-content">
+          <div class="alert alert-info">
+            <strong>Obligations réglementaires (Art. 47) :</strong> Publiez votre mention, votre déclaration et votre schéma pluriannuel pour être en règle avec la loi et prévenir tout risque d'amende administrative (jusqu'à 25 000 € / an).
+          </div>
+          <div class="mb-lg" style="display:flex;gap:1rem;flex-wrap:wrap">
+            <button class="btn btn-primary" id="btn-generate-legal">Générer les documents légaux</button>
+          </div>
+          <div id="legal-docs"></div>
+        </div>
+      </section>
+
+      <!-- === PAGE: Checklist Manuel === -->
+      <section id="page-checklist" class="page" aria-labelledby="title-checklist" style="display:none">
+        <h2 class="page-title" id="title-checklist">Checklist d'audit manuel</h2>
+        <div class="alert alert-warning mb-lg">
+          <strong>Complément d'audit :</strong> Les tests automatiques couvrent 30 à 40 % des critères RGAA. Cette checklist guide vos tests manuels indispensables (navigation clavier, NVDA, contrastes, reflow 400%).
+        </div>
+        <div id="checklist-content"></div>
+      </section>
+
+      <!-- === PAGE: À propos & Spécifications === -->
+      <section id="page-about" class="page" aria-labelledby="title-about" style="display:none">
+        <h2 class="page-title" id="title-about">À propos & Spécifications techniques</h2>
+        
+        <!-- Architecture globale -->
+        <div class="card mb-lg">
+          <h3 class="card-title" style="font-size:1.2rem;margin-bottom:0.75rem">Comment fonctionne le scan de votre site ?</h3>
+          <p class="text-sm" style="line-height:1.7;margin-bottom:1.25rem">
+            Cette plateforme combine un <strong>moteur de navigation réel</strong>, un <strong>analyseur de règles d'accessibilité de référence mondiale</strong>, et une <strong>passerelle de conformité aux lois françaises</strong> pour automatiser votre diagnostic en quelques secondes.
+          </p>
+          
+          <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));gap:1.25rem">
+            <!-- Brique 1 -->
+            <div style="background:var(--bg-secondary);padding:1.25rem;border-radius:var(--radius-md);border:1px solid var(--border-color)">
+              <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem">
+                <span class="pill-badge highlight">1. Navigation</span>
+                <strong style="font-size:1rem">Playwright (Chromium Headless)</strong>
+              </div>
+              <p class="text-sm text-muted" style="line-height:1.6">
+                Un vrai navigateur Google Chrome est exécuté en arrière-plan sans interface. Il charge l'URL cible, exécute les scripts JavaScript, attend la stabilisation réseau (<code>networkidle</code>) et découvre automatiquement l'arborescence des pages internes.
+              </p>
+            </div>
+
+            <!-- Brique 2 -->
+            <div style="background:var(--bg-secondary);padding:1.25rem;border-radius:var(--radius-md);border:1px solid var(--border-color)">
+              <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem">
+                <span class="pill-badge highlight">2. Analyse A11Y</span>
+                <strong style="font-size:1rem">axe-core (Deque Systems)</strong>
+              </div>
+              <p class="text-sm text-muted" style="line-height:1.6">
+                Le standard mondial de référence utilisé par Google et Microsoft est injecté dans le DOM de chaque page. Il évalue les contrastes de couleurs, balises <code>&lt;img alt&gt;</code>, landmarks ARIA, hiérarchie des titres et formulaires selon les normes <strong>WCAG 2.1 &amp; 2.2 AA</strong>.
+              </p>
+            </div>
+
+            <!-- Brique 3 -->
+            <div style="background:var(--bg-secondary);padding:1.25rem;border-radius:var(--radius-md);border:1px solid var(--border-color)">
+              <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem">
+                <span class="pill-badge highlight">3. Loi Française</span>
+                <strong style="font-size:1rem">Mapping RGAA 4.1 Officiel</strong>
+              </div>
+              <p class="text-sm text-muted" style="line-height:1.6">
+                Chaque anomalie technique est automatiquement rattachée aux <strong>106 critères et 13 thématiques du RGAA 4.1</strong> de la DINUM pour calculer le taux indicatif et générer votre déclaration d'accessibilité prête à être publiée.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cadre Légal et Sanctions -->
+        <div class="card mb-lg">
+          <h3 class="card-title" style="font-size:1.2rem;margin-bottom:0.75rem">Cadre juridique &amp; Sanctions financières</h3>
+          <p class="text-sm" style="line-height:1.7;margin-bottom:1rem">
+            En France, l'accessibilité numérique est une <strong>obligation légale stricte</strong> régie par l'article 47 de la loi n° 2005-102 du 11 février 2005 et le décret n° 2019-768 du 24 juillet 2019 :
+          </p>
+          <ul style="padding-left:1.5rem;line-height:1.8;font-size:0.95rem">
+            <li><strong>Obligation de publication :</strong> Tout site public ou entreprise réalisant plus de 250 millions d'euros de chiffre d'affaires doit publier une mention de conformité en page d'accueil, une déclaration d'accessibilité et un schéma pluriannuel sur 3 ans.</li>
+            <li><strong>Sanctions applicables :</strong> Le défaut de publication de ces mentions ou documents est passible d'une <strong>amende administrative pouvant atteindre 25 000 € par service et par an</strong> (50 000 € en cas de récidive).</li>
+            <li><strong>Contrôle de l'Arcom &amp; Défenseur des Droits :</strong> Les usagers et associations peuvent saisir le Défenseur des Droits en cas de rupture d'accès aux services.</li>
+          </ul>
+        </div>
+
+        <!-- Confidentialité & Sécurité -->
+        <div class="card">
+          <h3 class="card-title" style="font-size:1.2rem;margin-bottom:0.75rem">Confidentialité &amp; Traitement local</h3>
+          <p class="text-sm" style="line-height:1.7">
+            <strong>100% Souverain et local :</strong> L'ensemble de l'audit s'exécute directement sur votre environnement Node.js. Aucune donnée, aucun code source et aucune adresse ne sont transférés à des serveurs tiers. Les requêtes IA optionnelles ne sont envoyées que si vous fournissez explicitement votre propre clé API (ex. Mistral AI).
+          </p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Toast container -->
+  <div class="toast-container" id="toast-container" aria-live="assertive" aria-atomic="true"></div>
+
+  <!-- Modal Commerciale : Correction Automatique IA -->
+  <div class="modal-backdrop" id="autofix-modal" role="dialog" aria-modal="true" aria-labelledby="modal-autofix-title">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modal-autofix-title">
+          <span style="color:#18753C">⚡</span> Module de Correction Automatique IA
+        </h3>
+        <button class="modal-close" id="modal-autofix-close" aria-label="Fermer la fenêtre">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p style="font-size:1rem;margin-bottom:1rem;line-height:1.6">
+          <strong>Passez à la conformité sans mobiliser vos équipes de dev !</strong> Notre agent IA analyse vos violations d'accessibilité et génère automatiquement les patchs de code conformes RGAA 4.1.
+        </p>
+
+        <div style="background:rgba(24,117,60,0.1);border:1px solid #18753C;padding:0.75rem 1rem;border-radius:var(--radius-sm);margin-bottom:1.25rem;font-size:0.85rem">
+          ✓ Correction automatique des contrastes, attributs ARIA et labels de formulaires<br>
+          ✓ Script d'injection immédiate ou pull request GitHub / GitLab automatisée<br>
+          ✓ Garantie de conformité et protection contre les amendes administratives (25 000 €/an)
+        </div>
+
+        <h4 style="font-size:0.95rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--text-secondary);margin-bottom:0.75rem">Nos formules de correction</h4>
+
+        <div class="pricing-grid">
+          <!-- Formule 1 -->
+          <div class="pricing-card">
+            <div>
+              <strong style="font-size:1.05rem">Pack Audit + Patch</strong>
+              <div class="text-sm text-muted">Correction one-shot de votre site</div>
+              <div class="pricing-price">99 € <span style="font-size:0.8rem;font-weight:normal;color:var(--text-secondary)">HT</span></div>
+              <ul class="text-sm" style="line-height:1.6;margin-bottom:1rem;padding-left:1.2rem">
+                <li>Jusqu'à 30 pages</li>
+                <li>Patchs HTML / ARIA / CSS</li>
+                <li>Rapport de contre-visite</li>
+              </ul>
+            </div>
+            <button class="btn btn-autofix btn-sm" onclick="alert('Demande de devis enregistrée ! Un conseiller accessibilité va vous contacter.')">Choisir cette formule</button>
+          </div>
+
+          <!-- Formule 2 -->
+          <div class="pricing-card featured">
+            <span class="pricing-badge">Populaire</span>
+            <div>
+              <strong style="font-size:1.05rem">Pack Sérénité Annuelle</strong>
+              <div class="text-sm text-muted">Surveillance &amp; Correctifs continus</div>
+              <div class="pricing-price">299 € <span style="font-size:0.8rem;font-weight:normal;color:var(--text-secondary)">HT / an</span></div>
+              <ul class="text-sm" style="line-height:1.6;margin-bottom:1rem;padding-left:1.2rem">
+                <li>Pages illimitées</li>
+                <li>Mise à jour automatique de la déclaration</li>
+                <li>Protection continue anti-régression</li>
+                <li>Support prioritaire expert RGAA</li>
+              </ul>
+            </div>
+            <button class="btn btn-autofix btn-sm" onclick="alert('Demande d\'abonnement annuel enregistrée ! Un conseiller accessibilité va vous contacter.')">Débloquer l'offre Pro</button>
+          </div>
+        </div>
+
+        <div style="text-align:center;margin-top:1rem" class="text-sm text-muted">
+          Besoin d'un audit complet sur mesure avec prestataire certifié ? <a href="mailto:contact@example.com?subject=Demande%20Audit%20RGAA%20Complet" style="font-weight:700">Contactez notre équipe d'experts</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>

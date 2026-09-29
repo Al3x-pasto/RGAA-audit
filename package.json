@@ -1,0 +1,23 @@
+{
+  "name": "rgaa-audit",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Audit RGAA/WCAG automatisé, gratuit (Playwright + axe-core) — Interface web",
+  "scripts": {
+    "start": "node server.js",
+    "scan": "node scripts/scan.js",
+    "report": "node scripts/report.js",
+    "fix": "node scripts/ai-fix.js",
+    "legal": "node scripts/legal.js",
+    "audit": "npm run scan && npm run report",
+    "postinstall": "npx playwright install chromium"
+  },
+  "dependencies": {
+    "axe-core": "^4.10.0",
+    "express": "^5.2.1",
+    "playwright": "^1.48.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

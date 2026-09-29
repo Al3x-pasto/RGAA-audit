@@ -1,0 +1,9 @@
+a11y-audit:
+  image: mcr.microsoft.com/playwright:v1.48.0-jammy
+  script:
+    - npm install
+    - node scripts/scan.js
+    - node scripts/report.js
+    - node scripts/ai-fix.js || true
+    - node scripts/legal.js
+  artifacts: { when: always, paths: [results/] }

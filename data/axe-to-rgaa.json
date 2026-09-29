@@ -1,0 +1,16 @@
+{
+  "image-alt": ["1.1"], "input-image-alt": ["1.1"], "role-img-alt": ["1.1"], "area-alt": ["1.1"], "svg-img-alt": ["1.1"], "object-alt": ["1.1"], "presentation-role-conflict": ["1.2"],
+  "frame-title": ["2.1"], "frame-title-unique": ["2.2"],
+  "color-contrast": ["3.2"], "color-contrast-enhanced": ["3.2"], "link-in-text-block": ["3.1"],
+  "video-caption": ["4.3"], "audio-caption": ["4.1"], "no-autoplay-audio": ["4.10"],
+  "td-headers-attr": ["5.7"], "th-has-data-cells": ["5.7"], "scope-attr-valid": ["5.7"], "table-duplicate-name": ["5.4"], "td-has-header": ["5.7"],
+  "link-name": ["6.1","6.2"], "identical-links-same-purpose": ["6.1"], "skip-link": ["12.7"],
+  "aria-allowed-attr": ["7.1"], "aria-required-attr": ["7.1"], "aria-roles": ["7.1"], "aria-valid-attr": ["7.1"], "aria-valid-attr-value": ["7.1"], "aria-hidden-focus": ["7.1"], "aria-required-children": ["7.1"], "aria-required-parent": ["7.1"], "scrollable-region-focusable": ["7.3"],
+  "document-title": ["8.5"], "html-has-lang": ["8.3"], "html-lang-valid": ["8.4"], "valid-lang": ["8.8"], "duplicate-id": ["8.2"], "duplicate-id-aria": ["8.2"], "duplicate-id-active": ["8.2"],
+  "heading-order": ["9.1"], "empty-heading": ["9.1"], "page-has-heading-one": ["9.1"], "list": ["9.3"], "listitem": ["9.3"], "definition-list": ["9.3"], "dlitem": ["9.3"],
+  "landmark-one-main": ["9.2"], "region": ["9.2"], "landmark-unique": ["9.2"], "landmark-no-duplicate-main": ["9.2"],
+  "meta-viewport": ["10.4"], "meta-viewport-large": ["10.4"], "target-size": ["10.13"],
+  "label": ["11.1"], "form-field-multiple-labels": ["11.1"], "select-name": ["11.1"], "label-title-only": ["11.2"], "fieldset-legend": ["11.5"], "radiogroup": ["11.5"], "button-name": ["11.9"], "input-button-name": ["11.9"], "autocomplete-valid": ["11.13"],
+  "bypass": ["12.6","12.7"], "tabindex": ["12.8"], "focus-order-semantics": ["12.8"], "accesskeys": ["12.9"],
+  "meta-refresh": ["13.1"], "blink": ["13.8"], "marquee": ["13.8"], "css-orientation-lock": ["13.9"]
+}

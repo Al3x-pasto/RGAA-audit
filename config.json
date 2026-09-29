@@ -1,0 +1,24 @@
+{
+  "startUrl": "https://www.basic-fit.com/fr-fr/home",
+  "maxPages": 30,
+  "sameOriginOnly": true,
+  "axeTags": [
+    "wcag2a",
+    "wcag2aa",
+    "wcag21a",
+    "wcag21aa",
+    "wcag22aa",
+    "best-practice"
+  ],
+  "failOnImpact": [
+    "critical",
+    "serious"
+  ],
+  "maxAllowedFailures": 0,
+  "organisation": {
+    "nom": "Nom de l'organisation",
+    "siteNom": "Nom du site",
+    "email": "accessibilite@example.com",
+    "adresse": "Adresse postale"
+  }
+}

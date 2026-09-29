@@ -1,0 +1,26 @@
+{
+  "version": "RGAA 4.1",
+  "principesWCAG": [
+    {"id": 1, "nom": "Perceptible", "themesRGAA": [1,2,3,4,8,9,10]},
+    {"id": 2, "nom": "Utilisable", "themesRGAA": [5,6,7,11,12,13]},
+    {"id": 3, "nom": "Compréhensible", "themesRGAA": [8,9,11,12,13]},
+    {"id": 4, "nom": "Robuste", "themesRGAA": [7,8,11]}
+  ],
+  "themes": [
+    {"id": 1,  "nom": "Images", "nbCriteres": 9},
+    {"id": 2,  "nom": "Cadres", "nbCriteres": 2},
+    {"id": 3,  "nom": "Couleurs", "nbCriteres": 3},
+    {"id": 4,  "nom": "Multimédia", "nbCriteres": 13},
+    {"id": 5,  "nom": "Tableaux", "nbCriteres": 8},
+    {"id": 6,  "nom": "Liens", "nbCriteres": 2},
+    {"id": 7,  "nom": "Scripts", "nbCriteres": 5},
+    {"id": 8,  "nom": "Éléments obligatoires", "nbCriteres": 10},
+    {"id": 9,  "nom": "Structuration de l'information", "nbCriteres": 4},
+    {"id": 10, "nom": "Présentation de l'information", "nbCriteres": 14},
+    {"id": 11, "nom": "Formulaires", "nbCriteres": 13},
+    {"id": 12, "nom": "Navigation", "nbCriteres": 11},
+    {"id": 13, "nom": "Consultation", "nbCriteres": 12}
+  ],
+  "totalCriteres": 106,
+  "note": "Identifiants au format THÈME.N (ex. 1.1 à 1.9, 11.1 à 11.13). Intitulés officiels : https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/"
+}
