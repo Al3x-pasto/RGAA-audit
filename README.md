@@ -4,6 +4,10 @@ Pipeline : Scan (Playwright + axe-core) -> Rapport JSON/MD/HTML -> Prompts/corre
 
 ## Démarrage
 ```bash
+#pour ouvrir le site dans le navigateur:
+nmp start +  http://127.0.0.1:3000
+
+#en ligne de commendes
 npm install
 # éditer config.json (startUrl, organisation)
 npm run audit    # scan + rapport -> results/report.html
