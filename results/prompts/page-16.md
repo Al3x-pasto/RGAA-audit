@@ -9,319 +9,314 @@ Réponds en français et ne donne que les erreurs confirmées à corriger, avec 
 N'inclus pas de résumé, de gravité, d'impact légal, de justification longue, de recommandation générale, de feuille CSS transversale, de script automatique ni de problèmes non listés. Ne propose pas de refonte. Préserve le rendu visuel et privilégie le HTML natif à ARIA. Le HTML fourni est un instantané d'analyse : décris les modifications à appliquer au code source du site, ne prétends pas avoir modifié cet instantané.
 
 
-## Page : https://www.basic-fit.com/fr-fr/salles-de-sport?filters=Ladies
+## Page : https://codengo.bureauveritas.fr/public/referentiel/mentionslegales
 
 ## Violations détectées par axe-core
-- button-name (critical) [RGAA 11.9] : Buttons must have discernible text
-  ex: <button class="js-store-tile-swiper-prev-b342bc2f84074a6ab7b073e313c86123 store-tile-slider-arrow-prev"></button>
+- aria-dialog-name (serious) [RGAA N/A] : ARIA dialog and alertdialog nodes should have an accessible name
+  ex: <div id="consentModalApp" class="modal custom space-form-section show" tabindex="-1" role="dialog" data-v-app="">
 - color-contrast (serious) [RGAA 3.2] : Elements must meet minimum color contrast ratio thresholds
-  ex: <a href="https://www.basic-fit.com/fr-fr/declaration-cookie" style="">cookies</a>
+  ex: <a href="https://codengo.bureauveritas.fr/" rel="nofollow">www.codengo.fr</a>
+- empty-heading (minor) [RGAA 9.1] : Headings should not be empty
+  ex: <h3>&nbsp;</h3>
+- image-alt (critical) [RGAA 1.1] : Images must have alternative text
+  ex: <img src="/img/facebook.svg">
+- link-name (serious) [RGAA 6.1, 6.2] : Links must have discernible text
+  ex: <a href="https://www.facebook.com/CodengoFR/" class="col2 socialNetwork" target="_blank"><img src="/img/facebook.svg"></a>
+- meta-viewport (moderate) [RGAA 10.4] : Zooming and scaling must not be disabled
+  ex: <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 - region (moderate) [RGAA 9.2] : All page content should be contained by landmarks
-  ex: <a href="#main-content" class="skip-to-main-link skip-link" aria-label="Skip to main content">Skip to main content</a>
+  ex: <div id="termsOfUseApp" data-v-app="">
 
 ## Code HTML
 ```html
-<!DOCTYPE html><html lang="en" style="--scrollbar-width: 0px; --header-height: 116px;"><head>
-<meta charset="UTF-8">
-
-<meta http-equiv="x-ua-compatible" content="ie=edge">
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html><html lang="fr" xmlns:og="https://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml" manifest="cdr.appcache"><head><script>var isDebug = false</script>
+    
+    
 
 
-
-
-
-
-
-    <script type="text/javascript" async="" src="https://bat.bing.com/bat.js"></script><script type="text/javascript" async="" src="https://sst.basic-fit.com/gtag/destination?id=AW-967881324&amp;cx=c&amp;gtm=4e69p1"></script><script src="https://cdn.seamly-app.com/basicfit/client/v1/faq.js?v=1790682726145" async=""></script><script src="https://cdn.seamly-app.com/basicfit/client/v1/index.js?v=1790682726010" async=""></script><script type="text/javascript" charset="UTF-8" async="" src="https://consent.cookiebot.com/617f1858-ecb0-4c98-8ac5-383ed1c7ed56/cc.js?renew=false&amp;referer=www.basic-fit.com&amp;dnt=false&amp;init=false"></script><script type="text/javascript" async="" src="https://sst.basic-fit.com/gtag/js?id=AW-960670531&amp;cx=c&amp;gtm=4e69p1"></script><script type="text/javascript" async="" src="https://sst.basic-fit.com/gtag/js?id=DC-5116490&amp;cx=c&amp;gtm=4e69p1"></script><script type="text/javascript" async="" src="https://sst.basic-fit.com/gtag/js?id=G-NF41CTP09F&amp;cx=c&amp;gtm=4e69p1"></script><script async="" src="https://sst.basic-fit.com/gtm.js?id=GTM-PD6Q6J"></script><script>
-        (() => {
-            // Check if the back to checkout banner should be shown (reached at least step 2 and havent completed a succesful checkout yet)
-            const abandonedCartBanner = sessionStorage.getItem('abandoned-cart-banner') === '1' && sessionStorage.getItem('subscription-checkout-completed') !== '1';
-            document.documentElement.classList.toggle('abandoned-cart-active', abandonedCartBanner);
-        })();
-    </script>
-
-
-
-
-
-
-    <meta name="robots" content="noindex, nofollow">
-
-
-
-    <script type="application/ld+json">
-    {"@context":"http://schema.org","@type":"ItemList","numberOfItems":15,"itemListOrder":"ItemListOrderAscending","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"ExerciseGym","name":"Salle de sport du Port de Gennevilliers Ladies Clichy-la-Garenne","address":{"@type":"PostalAddress","streetAddress":"Route du Port de Gennevilliers 3","addressLocality":"Clichy-la-Garenne","postalCode":"92110","addressCountry":"FR"},"image":"https://www.basic-fit.com/dw/image/v2/BDFP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw0d6e4cd4/images/Project%20CDP%202024/FR%20Clubs/Clichy-la-Garenne/Ladies/Photo%2013-09-2022%2007%2027%2030.jpg?sw=380","url":"https://www.basic-fit.com/fr-fr/clubs/basic-fit-clichy-la-garenne-du-port-de-gennevilliers-ladies-19de20ffec574d808e125fa2768b3b41.html","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"06:00","closes":"22:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday","Sunday"],"opens":"09:00","closes":"19:00"}]}},{"@type":"ListItem","position":2,"item":{"@type":"ExerciseGym","name":"Salle de sport Les-Pavillons-sous-Bois Ladies Les Pavillons-sous-Bois","address":{"@type":"PostalAddress","streetAddress":"258 Avenue Aristide Briand","addressLocality":"Les Pavillons-sous-Bois","postalCode":"93320","addressCountry":"FR"},"image":"https://www.basic-fit.com/dw/image/v2/BDFP_PRD/on/demandware.static/-/Sites-master-catalog/default/dwe9c378f5/images/Project%20CDP%202024/FR%20Clubs/Les-Pavillons-Sous-Bois/Photo%2010-02-2022%2010%2040%2000.jpg?sw=380","url":"https://www.basic-fit.com/fr-fr/clubs/basic-fit-les-pavillons-sous-bois-ladies-3d21320881b34daf9d666948f0cc4afc.html","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"06:00","closes":"22:30"}]}},{"@type":"ListItem","position":3,"item":{"@type":"ExerciseGym","name":"Salle de sport Rue Nationale Ladies Lille","address":{"@type":"PostalAddress","streetAddress":"85 Rue Nationale","addressLocality":"Lille","postalCode":"59800","addressCountry":"FR"},"image":"https://brand.basic-fit.com/match/KP_Number/4050/Club_area/Front_club_outside/Front_club_outside?io=transform:fit,width:380","url":"https://www.basic-fit.com/fr-fr/clubs/basic-fit-lille-rue-nationale-b342bc2f84074a6ab7b073e313c86123.html","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"06:00","closes":"22:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday","Sunday"],"opens":"09:00","closes":"19:00"}]}},{"@type":"ListItem","position":4,"item":{"@type":"ExerciseGym","name":"Salle de sport Sud Rue de Douai Ladies Lille","address":{"@type":"PostalAddress","streetAddress":"124 Rue de Douai","addressLocality":"Lille","postalCode":"59000","addressCountry":"FR"},"image":"https://www.basic-fit.com/dw/image/v2/BDFP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw43b55ca0/images/Default-club-images/ClubPhoto_Default_03.jpg?sw=380","url":"https://www.basic-fit.com/fr-fr/clubs/basic-fit-lille-sud-rue-de-douai-ladies-273bd322f4674be8bb0c088a1dc8163c.html","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"06:00","closes":"22:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday","Sunday"],"opens":"09:00","closes":"19:00"}]}},{"@type":"ListItem","position":5,"item":{"@type":"ExerciseGym","name":"Salle de sport CC Quatre Pavillons Mixte + Ladies Lormont","address":{"@type":"PostalAddress","streetAddress":"Centre Commercial des Quatre Pavillons","addressLocality":"Lormont","postalCode":"33310","addressCountry":"FR"},"image":"https://brand.basic-fit.com/match/KP_Number/4377/Club_area/Front_club_outside/Front_club_outside?io=transform:fit,width:380","url":"https://www.basic-fit.com/fr-fr/clubs/basic-fit-lormont-cc-des-quatre-pavillons-ladies-%2B-mixte-1ce25751eeff4fd2a2b133171ccafb43.html","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"06:00","closes":"22:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday","Sunday"],"opens":"09:00","closes":"19:00"}]}},{"@type":"ListItem","position":6,"item":{"@type":"ExerciseGym","name":"Salle de sport Porte d’Aix Ladies Marseille","address":{"@type":"PostalAddress","streetAddress":"40 Rue Lucien Gaillard","addressLocality":"Marseille","postalCode":"13000","addressCountry":"FR"},"image":"https://www.basic-fit.com/dw/image/v2/BDFP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw08eaf2cf/images/Default-club-images/ClubPhoto_Default.jpg?sw=380","url":"https://www.basic-fit.com/fr-fr/clubs/basic-fit-marseille-porte-d%E2%80%99aix-ladies-%2B-mixte-31534004555346638e226964a0b3cc58.html","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"06:00","closes":"22:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday","Sunday"],"opens":"09:00","closes":"19:00"}]}},{"@type":"ListItem","position":7,"item":{"@type":"ExerciseGym","name":"Salle de sport Rue Lejzer Zamenhof Mixte + Ladies Montpellier","address":{"@type":"PostalAddress","streetAddress":"177 Rue Lejzer Zamenhof","addressLocality":"Montpellier","postalCode":"34000","addressCountry":"FR"},"image":"https://brand.basic-fit.com/match/KP_Number/4343/Club_area/Front_club_outside/Front_club_outside?io=transform:fit,width:380","url":"https://www.basic-fit.com/fr-fr/clubs/basic-fit-montpellier-rue-lejzer-zamenhof-ladies-%2B-mixte-a574b151c6ee4c8f8c70a6575ca4f806.html","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"06:00","closes":"22:30"}]}},{"@type":"ListItem","position":8,"item":{"@type":"ExerciseGym","name":"Salle de sport Avenue Pablo Picasso Ladies Nanterre","address":{"@type":"PostalAddress","streetAddress":"Avenue Pablo Picasso 74","addressLocality":"Nanterre","postalCode":"92000","addressCountry":"FR"},"image":"https://brand.basic-fit.com/match/KP_Number/4833/Club_area/Front_club_outside/Front_club_outside?io=transform:fit,width:380","url":"https://www.basic-fit.com/fr-fr/clubs/basic-fit-nanterre-avenue-pablo-picasso-fe2dfdd0e7ff4d87b41ab38b157deea3.html","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"06:00","closes":"22:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday","Sunday"],"opens":"09:00","closes":"19:00"}]}},{"@type":"ListItem","position":9,"item":{"@type":"ExerciseGym","name":"Salle de sport Place Rosa Parks Mixte + Ladies Nantes","address":{"@type":"PostalAddress","streetAddress":"Place Rosa Parks","addressLocality":"Nantes","postalCode":"44000","addressCountry":"FR"},"image":"https://www.basic-fit.com/dw/image/v2/BDFP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw93edf64f/images/ClubsFR/Basic-Fit-Nantes-Berlin-1.jpg?sw=380","url":"https://www.basic-fit.com/fr-fr/clubs/basic-fit-nantes-place-rosa-parks-mixte-%2B-ladies-07349902901e440b8826c4b3a882e898.html","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"06:00","closes":"22:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday","Sunday"],"opens":"09:00","closes":"19:00"}]}},{"@type":"ListItem","position":10,"item":{"@type":"ExerciseGym","name":"Salle de sport Avenue de la porte de Chatillon Ladies Paris","address":{"@type":"PostalAddress","streetAddress":"Avenue de la porte de Chatillon 21/23","addressLocality":"Paris","postalCode":"75000","addressCountry":"FR"},"image":"https://www.basic-fit.com/dw/image/v2/BDFP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw33c9c75c/images/Project%20CDP%202024/FR%20Clubs/Paris/Avenue%20de%20la%20porte%20de%20Chatillon%20Ladies/Photo%2014-09-2022%2006%2017%2003.jpg?sw=380","url":"https://www.basic-fit.com/fr-fr/clubs/basic-fit-paris-avenue-de-la-porte-de-chatillon-ladies-9e315ea90f164d5eb47be6c0430e68b4.html","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"06:00","closes":"22:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday","Sunday"],"opens":"09:00","closes":"19:00"}]}},{"@type":"ListItem","position":11,"item":{"@type":"ExerciseGym","name":"Salle de sport Rue de la Chapelle Ladies Paris","address":{"@type":"PostalAddress","streetAddress":"57 Rue de la Chapelle","addressLocality":"Paris","postalCode":"75110","addressCountry":"FR"},"image":"https://www.basic-fit.com/dw/image/v2/BDFP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw08eaf2cf/images/Default-club-images/ClubPhoto_Default.jpg?sw=380","url":"https://www.basic-fit.com/fr-fr/clubs/basic-fit-paris-rue-de-la-chapelle-ladies-c6b6ffa47bfd4d688de3b1b13719189f.html","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"06:00","closes":"22:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday","Sunday"],"opens":"09:00","closes":"19:00"}]}},{"@type":"ListItem","position":12,"item":{"@type":"ExerciseGym","name":"Salle de sport Boulevard Gambetta Ladies Roubaix","address":{"@type":"PostalAddress","streetAddress":"160 Boulevard Gambetta","addressLocality":"Roubaix","postalCode":"59100","addressCountry":"FR"},"image":"https://www.basic-fit.com/dw/image/v2/BDFP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw7b865d54/images/ClubsFR/new-fr/Basic-Fit-Roubaix-Gambetta-Ladies-1.jpg?sw=380","url":"https://www.basic-fit.com/fr-fr/clubs/basic-fit-roubaix-boulevard-gambetta-ladies-448c6ccacfc94ff390f7ef2b4426d322.html","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"06:00","closes":"22:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday","Sunday"],"opens":"09:00","closes":"19:00"}]}}]}
+<script type="module">
+	if (hasConsent('marketing')) {
+	    loadScript('https://www.youtube.com/iframe_api', false, false);
+	}
+    rootPathService.setRootPath('/');
 </script>
-
-
-
-
-    <link rel="canonical" href="https://www.basic-fit.com/fr-fr/salles-de-sport">
-
-
-
-<title>
-    Trouver une salle de sport en France ! | Basic-Fit
-</title>
-
-<meta name="description" content="Vous cherchez une salle de sport proche de chez vous ? Avec plus de 1700 clubs, il y a toujours un club à proximité ! Inscrivez-vous dès maintenant !">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-    
-        <link rel="alternate" href="https://www.basic-fit.com/fr-fr/salles-de-sport?filters=Ladies" hreflang="fr-fr">
-    
-
-    
-
-    
-        <link rel="alternate" href="https://www.basic-fit.com/nl-nl/sportscholen?filters=Ladies" hreflang="nl-nl">
-    
-
-    
-
-    
-        <link rel="alternate" href="https://www.basic-fit.com/de-de/club-finder?filters=Ladies" hreflang="de-de">
-    
-
-    
-
-    
-        <link rel="alternate" href="https://www.basic-fit.com/en-nl/club-finder?filters=Ladies" hreflang="en-nl">
-    
-
-    
-
-    
-        <link rel="alternate" href="https://www.basic-fit.com/en-de/club-finder?filters=Ladies" hreflang="en-de">
-    
-
-    
-
-    
-        <link rel="alternate" href="https://www.basic-fit.com/en-be/club-finder?filters=Ladies" hreflang="en-be">
-    
-
-    
-
-    
-        <link rel="alternate" href="https://www.basic-fit.com/en-lu/club-finder?filters=Ladies" hreflang="en-lu">
-    
-
-    
-
-    
-        <link rel="alternate" href="https://www.basic-fit.com/en-es/club-finder?filters=Ladies" hreflang="en-es">
-    
-
-    
-
-    
-        <link rel="alternate" href="https://www.basic-fit.com/nl-be/fitnessclubs?filters=Ladies" hreflang="nl-be">
-    
-
-    
-
-    
-        <link rel="alternate" href="https://www.basic-fit.com/en-fr/club-finder?filters=Ladies" hreflang="en-fr">
-    
-
-    
-
-    
-        <link rel="alternate" href="https://www.basic-fit.com/es-es/gimnasios?filters=Ladies" hreflang="es-es">
-    
-
-    
-
-    
-        <link rel="alternate" href="https://www.basic-fit.com/fr-be/salles-de-fitness?filters=Ladies" hreflang="fr-be">
-    
-
-    
-
-    
-        <link rel="alternate" href="https://www.basic-fit.com/fr-lu/salles-de-fitness?filters=Ladies" hreflang="fr-lu">
-    
-
-
-
-
-
-<link rel="shortcut icon" href="/on/demandware.static/Sites-BFE-Site/-/default/dw4fb8fce0/images/favicon.ico">
-<link rel="icon" type="image/svg+xml" href="/on/demandware.static/Sites-BFE-Site/-/default/dw6ecfd870/img/favicon.svg">
-<link rel="icon" type="image/png" href="/on/demandware.static/Sites-BFE-Site/-/default/dwa8ce1d8c/img/favicon-32x32.png" sizes="32x32">
-<link rel="apple-touch-icon" href="/on/demandware.static/Sites-BFE-Site/-/default/dw8f0abf99/img/favicon-180x180.png">
-
-
-<link rel="preload" href="/on/demandware.static/Sites-BFE-Site/-/default/dw514615e6/fonts/icons.woff" as="font" type="font/woff" crossorigin="anonymous">
-<link rel="preload" href="/on/demandware.static/Sites-BFE-Site/-/default/fonts/HeadingProTreble-ExtraBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-<link rel="preload" href="/on/demandware.static/Sites-BFE-Site/-/default/fonts/HeadingProTreble-Heavy.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-<link rel="preload" href="/on/demandware.static/Sites-BFE-Site/-/default/fonts/HeadingProTreble-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-
-
-<style>
-    @font-face {
-        font-family: iconfont;
-        src: url(/on/demandware.static/Sites-BFE-Site/-/default/dw514615e6/fonts/icons.woff) format("woff");
-        font-display: block;
-    }
-
-    @font-face {
-        font-family: HeadingProTreble-ExtraBold;
-        src: url('/on/demandware.static/Sites-BFE-Site/-/default/fonts/HeadingProTreble-ExtraBold.woff2') format('woff2');
-        font-weight: bold;
-        font-style: normal;
-        font-display: swap;
-    }
-
-    @font-face {
-        font-family: HeadingProTreble-Heavy;
-        src: url('/on/demandware.static/Sites-BFE-Site/-/default/fonts/HeadingProTreble-Heavy.woff2') format('woff2');
-        font-weight: 900;
-        font-style: normal;
-        font-display: swap;
-    }
-
-    @font-face {
-        font-family: HeadingProTreble-Regular;
-        src: url('/on/demandware.static/Sites-BFE-Site/-/default/fonts/HeadingProTreble-Regular.woff2') format('woff2');
-        font-weight: 500;
-        font-style: normal;
-        font-display: swap;
-    }
-</style>
-
-<link rel="stylesheet" href="/on/demandware.static/Sites-BFE-Site/-/fr_FR/v1790676984466/css/root/global.css">
-
-
-    <link rel="stylesheet" href="/on/demandware.static/Sites-BFE-Site/-/fr_FR/v1790676984466/css/pages/finder.css">
-
-
-<style media="screen">
-    @media not all and (min-resolution:.001dpcm) {
-        @media {
-            .safari-only {
-                display: block;
-            }
-        }
-    }
-</style>
-
-
-
-
-
-<!-- loop all the ab tests -->
-
-
-
-
-
-
-
-    <meta property="og:title" content="Trouver une salle de sport en France ! | Basic-Fit">
-
-
-
-    <meta property="og:description" content="Vous cherchez une salle de sport proche de chez vous ? Avec plus de 1700 clubs, il y a toujours un club à proximité ! Inscrivez-vous dès maintenant !">
-
-
-
-    <meta property="og:url" content="https://www.basic-fit.com/fr-fr/salles-de-sport">
-
-
-
-    <meta property="og:type" content="website">
-
-
-
-
-
-
-
-
-
-
-
-
 <script>
-    var dataLayer = window.dataLayer = window.dataLayer || [];
 
-    // Google Consent Mode
-    function gtag(){dataLayer.push(arguments);}
-    gtag('consent', 'default', {
-        ad_storage: 'denied',
-        analytics_storage: 'granted',
-        ad_personalization: 'denied',
-        ad_user_data: 'denied',
-        functionality_storage: 'denied',
-        personalization_storage: 'denied'
-    });
+	/*
+	* ================================================================
+	* = LOG
+	* ================================================================
+	*/
 
-    dataLayer.push({
-            pageCountry: 'FR',
-            pageLanguage: 'FR',
-            internalTraffic: 'false',
-            eventId: '341538363669948'
-    });
-    dataLayer.push({'event':'cookie.consent.system.page.init'});
-    dataLayer.push({ page: null });
-    dataLayer.push({"event":"data_ready","page":{"page_type":"salles-de-sport","page_country":"FR","page_language":"FR"},"traffictype":{"platform":"web","ip_address":"195.220.217.206"}});
+	var logConsole = function(level, param1, param2, param3, param4, param5) {
+		var prefix = '[CDR] -';
+        if (param5 !== undefined){
+            console[level](prefix, param1, param2, param3, param4, param5);
+        }else if (param4 !== undefined){
+			console[level](prefix, param1, param2, param3, param4);
+		} else if (param3 !== undefined){
+            console[level](prefix, param1, param2, param3);
+        } else if (param2 !== undefined){
+            console[level](prefix, param1, param2);
+        } else {
+            console[level](prefix, param1);
+        }
+	}
+
+	var logDebug = function(param1, param2, param3, param4, param5) {
+		logConsole('debug', param1, param2, param3, param4, param5);
+	}
+
+    var logInfo = function(param1, param2, param3, param4, param5) {
+        logConsole('log', param1, param2, param3, param4, param5);
+    }
+
+    var logWarn = function(param1, param2, param3, param4, param5) {
+        logConsole('warn', param1, param2, param3, param4, param5);
+    }
+
+    var logError = function(param1, param2, param3, param4, param5) {
+        logConsole('error', param1, param2, param3, param4, param5);
+    }
+
+    /*
+    * ================================================================
+    * = COMMON
+    * ================================================================
+    */
+
+    hasConsent = function(cname) {
+        var toFind = 'bureauveritas.cdr.consent.' + cname + "=true";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var hasConsent = decodedCookie.indexOf(toFind) != -1;
+        logDebug('consent to load ', cname, '=', hasConsent);
+        return hasConsent;
+    }
+
+    // Function to load script dynamically
+    var loadScript = function(scriptUrl, isAsync, isDefer){
+        // Create script
+        var script = document.createElement('script');
+        script.src = scriptUrl;
+        script.async = isAsync === undefined ? true : isAsync;
+        script.defer = isDefer === undefined ? true : isDefer;
+        script.type = 'text/javascript';
+        // Insert in head
+        var head = document.getElementsByTagName('head').item(0);
+        head.appendChild(script);
+        logDebug('load script', scriptUrl, 'async=', script.async, 'defer=', script.defer);
+    }
+
+    /*
+	* ================================================================
+	* = MAPBOX
+	* ================================================================
+	*/
+    var mapBoxAccessToken = '';
+
+    var youtubeUrl = 'https://www.youtube.com/watch?v=';
+    var movieAdvert = 'EzTPYsquBOQ';
+    var movieAdvertSmall = 'A0o3dvSQIbo';
+    var movieInstruction = '8gSmnskpr_s';
+    var movieYoutuber = 'VMB87VKcw5E';
+    
+    var YOUTUBE_ADVERT_MOVIE_URL = youtubeUrl + movieAdvert;
+    var YOUTUBE_ADVERT_SMALL_MOVIE_URL = youtubeUrl + movieAdvertSmall;
+    var YOUTUBE_INSTRUCTION_MOVIE_URL = youtubeUrl + movieInstruction;
+    var YOUTUBER_MOVIE_URL = youtubeUrl + movieYoutuber;
+
+	/*
+	* ================================================================
+	* = SERVICE WORKERS
+	* ================================================================
+	*/
+
+	// If service worker can be used and not in local
+	if ('serviceWorker' in navigator && !window.location.hostname.includes('localhost')) {
+	    var registerSw = function() {
+	        navigator.serviceWorker.register('/sw.min-8.8.46.js.gz');
+	    }
+	    window.addEventListener('load', registerSw);
+	    logDebug('Service Worker enable');
+	}
+
+
+
+    /*
+    * ================================================================
+    * = GDPR
+    * ================================================================
+    */
+
+    hideShowPopin = function(popinId, show) {
+    	var display = 'none';
+        var opacity = 0;
+    	if (show){
+    		display = 'block';
+    		opacity = 1;
+    	}
+    	document.getElementById(popinId).style.display = display;
+        document.getElementById(popinId).style.opacity = opacity;
+    }
+
+    // If has consent to use tracking
+    var enableTracking = hasConsent('tracking');
+
+    var loadRecaptchaScript = function(){
+    	if (enableTracking) {
+            logDebug('googlerecaptcha enabled');
+    	    loadScript('https://www.google.com/recaptcha/enterprise.js?render=6Le2qiItAAAAANL2RsKh-IiA-lsZ0oLPCuwvEn6J', false, false);
+            return true;
+    	} else {
+            logDebug('googlerecaptcha disabled');
+            return false;
+    	}
+    }
+
+    var executeEntrepriseRecaptcha = function(action, callbackFunction, tries) {
+        tries = tries || 0;
+        setTimeout(function() {
+            if (typeof grecaptcha !== 'undefined' && typeof grecaptcha.enterprise !== 'undefined') {
+                grecaptcha.enterprise.ready(async () => {
+                    try {
+                        const token = await grecaptcha.enterprise.execute('6Le2qiItAAAAANL2RsKh-IiA-lsZ0oLPCuwvEn6J', {action: action});
+                        callbackFunction(token);
+                    } catch (e) {
+                        logError('executeEntrepriseRecaptcha error', action, e);
+                    }
+                });
+            } else if (tries < 50) {
+                logDebug('grecaptcha enterprise not ready, retry', tries);
+                executeEntrepriseRecaptcha(action, callbackFunction, tries + 1);
+            } else {
+                logWarn('grecaptcha enterprise has not been loaded');
+            }
+        }, tries === 0 ? 0 : 250);
+    }
+
+    // If has consent to use social
+    if (hasConsent('social')) {
+        logDebug('facebook enabled');
+        var fbSdkURL = '//connect.facebook.net/en_US/sdk.js';
+        // See : https://developers.facebook.com/docs/javascript/quickstart/
+        window.fbAsyncInit = function() {
+        	FB.init({
+            			appId      : '748765411943482',
+                        autoLogAppEvents : true,
+                        xfbml            : true,
+                        version          : 'v3.2'
+					});
+			FB.AppEvents.logPageView();
+		};
+        (function(d, s, id){
+	        var js, fjs = d.getElementsByTagName(s)[0];
+	        if (d.getElementById(id)) {return;}
+	        js = d.createElement(s); js.id = id;
+	        js.src = fbSdkURL;
+	        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    } else {
+        logDebug('facebook disabled');
+    }
+
 </script>
 
 
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://sst.basic-fit.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PD6Q6J');</script>
-<!-- End Google Tag Manager -->
 
 
+	
 
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="bv-health-check" content="OK">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
 
+        <link rel="shortcut icon" href="/favicon.ico">
+        <link rel="canonical" href="https://codengo.bureauveritas.fr/portal/public/referentiel/mentionslegales">
+		<meta name="msapplication-TileColor" content="#eee">
+		<meta name="msapplication-TileImage" content="/favicon.ico">
 
+        
 
+        <!-- OPEN GRAPH -->
+        <meta property="og:title" content="Code'nGo! - Examen du code de la route - Bureau Veritas">
+		<meta property="fb:app_id" content="748765411943482">
+		<meta property="fb:admins" content="748765411943482">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://codengo.bureauveritas.fr/portal">
+		<meta property="og:image" content="https://codengo.bureauveritas.fr/portal/img/logo-codengo.jpg">
+		<meta property="og:description" content="Passez l'examen du code de la route près de chez vous pour 30€ ! Entraînez-vous au code et inscrivez-vous en ligne pour passer l'épreuve.">
+		<meta property="og:locale" content="fr_FR">
+		<meta property="og:site_name" content="Code'nGo!">
 
-    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="617f1858-ecb0-4c98-8ac5-383ed1c7ed56" async="async" fetchpriority="high"></script>
+        <!-- TITLE -->
+        
+        
+		  <title>Mentions légales</title>
+        
 
+        <!-- DESCRIPTION -->
+        
+        
+          <meta name="description" content="Les mentions légales de Code'nGO!.">
+        
 
+		
+			<meta name="google-site-verification" content="X7gZU-feM9tk2ZSQI2XMs5_zVT7EBPYkYddc5kAhb54">
+		
 
-<script>//common/scripts.isml</script>
-<script defer="" type="text/javascript" src="/on/demandware.static/Sites-BFE-Site/-/fr_FR/v1790676984466/js/main.js"></script>
+        
+            <!-- Google Tag Manager -->
+            <script>
+	            if (enableTracking) {
+	            	logDebug('googletagmanager enabled');
+	                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	                })(window,document,'script','dataLayer','GTM-KV4XD5G');
+	            } else {
+	            	logDebug('googletagmanager disabled');
+	            }
+            </script>
+            <!-- End Google Tag Manager -->
+        
 
-    <script defer="" type="text/javascript" src="/on/demandware.static/Sites-BFE-Site/-/fr_FR/v1790676984466/js/finder.js">
-    </script>
+        
+            <!-- Google Tag Manager -->
+            <script>
+	            if (enableTracking) {
+	                logDebug('google adds tag manager');
+	                window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', 'AW-17959379134');
 
+	            } else {
+	            	logDebug('google adds tag manager disabled');
+	            }
+            </script>
+            <!-- End Google Tag Manager -->
+        
 
+        
+        <meta name="_csrf_parameter" content="_csrf"><meta name="_csrf_header" content="X-CSRF-TOKEN"><meta name="_csrf" content="b6c81235-ec2e-4329-9670-d841285cca70">
 
-<script src="https://api.mapbox.com/mapbox-gl-js/v3.17.0/mapbox-gl.js"></script>
-
-<link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v3.17.0/mapbox-gl.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-
-<noscript>
-    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v3.17.0/mapbox-gl.css" />
-</noscript>
-
-
-<script src="https://d5yoctgpv4cpx.cloudfront.net/RUM-2A7BA8F27F/v4-www.basic-fit.com.js"></script><style type="text/css" id="CookieConsentStateDisplayStyles">.cookieconsent-optin-preferences,.cookieconsent-optin-statistics,.cookieconsent-optin-marketing,.cookieconsent-optin{display:none;}.cookieconsent-optout-preferences,.cookieconsent-optout-statistics,.cookieconsent-optout-marketing,.cookieconsent-optout{display:block;display:initial;}</style><style>@keyframes cvco-loader{0%,75%,to{border-radius:50%;transform:scaleY(.45)}37.5%{border-radius:2.5px;transform:scaleY(1)}}@keyframes cvco-fadeIn{0%{opacity:0}to{opacity:1}}@keyframes cvco-blink{0%,to{opacity:0}50%{opacity:1}}.cvco-app .cvco-chat,.cvco-app .cvco-chat *,.cvco-app .cvco-chat :after,.cvco-app .cvco-chat :before{box-sizing:border-box}.cvco-app .cvco-chat{color:#3d4166;display:flex;flex-direction:column;font-family:arial,helvetica,sans-serif;font-size:12px;outline:0;transform-origin:100% 100%;transition:margin .3s ease,height .3s ease,transform .3s ease,opacity .3s ease}.cvco-app .cvco-chat--layout-inline{background-color:transparent;background-color:initial;box-shadow:none;height:-moz-fit-content;height:fit-content}@media(min-width:641px){.cvco-app .cvco-chat--layout-inline{flex-direction:row}}.cvco-app .cvco-chat--layout-inline.cvco-chat--collapsed .cvco-chat-wrapper{height:auto}.cvco-app .cvco-chat--layout-window{max-height:calc(85vh - 40px);max-width:calc(100vw - 40px)}@media(min-width:641px){.cvco-app .cvco-chat--layout-window{max-height:calc(100vh - 40px)}@supports(-webkit-overflow-scrolling:touch){.cvco-app .cvco-chat--layout-window{max-height:calc(90vh - 40px)}}}@media(min-width:1025px){.cvco-app .cvco-chat--layout-window{bottom:20px;max-height:calc(100vh - 40px);right:20px}@supports(-webkit-overflow-scrolling:touch){.cvco-app .cvco-chat--layout-window{max-height:calc(90vh - 40px)}}}.cvco-app .cvco-chat--layout-window{bottom:20px;display:none;height:720px;max-width:calc(100% - 40px);opacity:0;position:fixed;right:20px;transform:scale(0);width:360px;z-index:1}.cvco-app .cvco-chat--layout-window.cvco-transition--visible{display:flex}.cvco-app .cvco-chat--layout-window.cvco-transition--in{opacity:1;transform:scale(1)}.cvco-app .cvco-chat--layout-app{bottom:0;height:100%;left:0;max-height:100%;max-width:100%;position:fixed;right:0;top:0;width:100%;z-index:1}.cvco-app .cvco-chat-wrapper{backface-visibility:hidden;border:1px solid #a3b4bf;border-radius:10px;box-shadow:0 0 20px 0 rgba(0,0,0,.1);display:flex;flex-direction:column;height:100%;overflow:hidden;position:relative;transform:translateZ(0);transition:flex .3s ease,width .3s ease,height .3s ease,border-radius .3s ease;width:100%;z-index:1}.cvco-app .cvco-chat--layout-inline .cvco-chat-wrapper{height:0;width:100%}@media(min-width:641px)and (max-width:1023px){.cvco-app .cvco-chat--layout-inline .cvco-chat-wrapper{flex:0 0 100%}.cvco-app .cvco-chat--layout-inline .cvco-chat-wrapper:not(:last-child){flex:0 0 50%;width:50%}}@media(min-width:1025px){.cvco-app .cvco-chat--layout-inline .cvco-chat-wrapper{flex:0 0 67%;width:67%}}.cvco-app .cvco-chat--layout-inline.cvco-transition--in .cvco-chat-wrapper{height:720px;max-height:90vh}.cvco-app .cvco-chat__container{display:flex;flex-grow:1;justify-content:center;position:relative}.cvco-app .cvco-chat__container__scroll-area{display:flex;flex-direction:column;height:100%;justify-content:space-between;overflow-y:auto;overscroll-behavior:contain;position:relative;width:100%;will-change:scroll-position}.cvco-app .cvco-chat__container__header{position:sticky;top:0;z-index:1}.cvco-app .cvco-chat__body{display:flex;flex-grow:1;padding:0;position:relative}.cvco-app .cvco-conversation__container>div[role=log]{margin-top:auto}.cvco-app .cvco-chat__entry{border-top:1px solid #dee3e5;flex:0 0 auto;padding:10px;position:relative;width:100%}.cvco-app .cvco-chat__entry:has(.cvco-entry__body--hidden){border-top:0;padding-bottom:0;padding-top:0}.cvco-app .cvco-chat__entry .cvco-entry__body--hidden{display:none}.cvco-app .cvco-chat--layout-inline.cvco-chat--collapsed .cvco-chat__entry{border:0}.cvco-app .cvco-entry__body{align-items:flex-end;display:flex;gap:5px;width:100%}.cvco-app p{margin:0}.cvco-app img{max-width:100%}.cvco-app .cvco-label{color:#4a48c1;display:block}.cvco-app .cvco-conversation__item--abort-transaction{padding-top:10px}.cvco-app .cvco-conversation__item--abort-transaction .cvco-abort-transaction__button{background-color:#fff;border:1px solid;border-radius:10px;padding:5px 10px}.cvco-app .cvco-avatar{border-radius:5px;display:block;flex-shrink:0;height:32px;overflow:hidden;position:relative;width:32px}.cvco-app .cvco-avatar>.cvco-icon,.cvco-app .cvco-avatar__graphic{display:block}.cvco-app .cvco-conversation__message+.cvco-avatar{align-self:flex-end;margin-left:10px}.cvco-app a:focus,.cvco-app button:focus,.cvco-app input:focus{outline:none}.cvco-app a:focus-visible,.cvco-app button:focus-visible,.cvco-app input:focus-visible{outline:1px dotted #212121;outline:1px auto -webkit-focus-ring-color}.cvco-app .cvco-button{background:none;border:0;cursor:pointer;gap:10px;margin:0;padding:0}.cvco-app .cvco-button span{color:inherit;font-family:inherit;font-size:inherit;font-weight:inherit}.cvco-app .cvco-button--primary{background-color:#4a48c1;border-radius:5px;font-weight:700;min-height:40px;padding:10px 15px}.cvco-app .cvco-button--secondary{color:#4a48c1;font-weight:700;padding:10px 15px}.cvco-app .cvco-button--tertiary{background-color:transparent;background-color:initial;border-radius:5px;color:#fff;font-size:12px;font-weight:700;padding:2px 5px}.cvco-app .cvco-button[aria-disabled=true]{color:#5e727b;cursor:auto}.cvco-app .cvco-button__state{background-color:#eff3f6;border-radius:5px;color:inherit;display:inline-block;margin:0;padding:2px 10px}.cvco-app .cvco-choice-prompt{display:flex;flex-direction:column;gap:5px;padding:0}.cvco-app .cvco-choice-prompt__item{display:block;width:100%}.cvco-app .cvco-choice-prompt__item .cvco-button{display:inline-block;white-space:normal}.cvco-app .cvco-choice-prompt__item--secondary .cvco-button{background-color:transparent;background-color:initial;color:#4a48c1;padding:5px 0}.cvco-app .cvco-button--choose-again{align-items:center;display:flex;gap:10px;line-height:1;margin:5px 0;padding:0;transition:margin .3s ease,color .3s ease}.cvco-app .cvco-button--choose-again[aria-expanded=true]{margin:20px 0 10px}.cvco-app .cvco-button--choose-again .cvco-icon{align-items:center;display:flex;flex:0 0 8px;height:8px;justify-content:center;margin:0;padding:0;transform-origin:50% 50%;transition:transform .3s ease;width:8px}.cvco-app .cvco-button--choose-again .cvco-icon path{fill:currentcolor}.cvco-app .cvco-button--choose-again[aria-expanded=true] .cvco-icon{transform:rotate(180deg)}.cvco-app .cvco-conversation__container{bottom:0;display:flex;flex:1 1 100%;flex-direction:column;gap:10px;height:100%;justify-content:space-between;left:0;max-height:100%;position:absolute;right:0;top:0}.cvco-app .cvco-conversation__container div[role=log]{margin:auto 0 0}.cvco-app .cvco-conversation{gap:10px;justify-content:space-between;list-style:none;margin:auto 0 0;padding:20px 20px 0;width:100%}.cvco-app .cvco-conversation:after{content:"";display:block;flex:0 0 10px;height:10px;width:100%}.cvco-app .cvco-chat--layout-inline .cvco-conversation{position:relative}.cvco-app .cvco-conversation__item{display:block;width:100%}.cvco-app .cvco-conversation__item--new-participant{margin-top:10px}.cvco-app .cvco-conversation__item--new-participant:first-child{margin-top:0}.cvco-app .cvco-divider{background:linear-gradient(180deg,#fff,#eff3f6);background-repeat:no-repeat;background-size:100% 40px;display:flex;justify-content:center;line-height:1.5;margin:20px -20px 0;overflow:hidden;padding:65px 30px 0;position:relative}.cvco-app .cvco-divider:before{background:radial-gradient(110px at 50% 300%,rgba(74,72,193,.5) 0,hsla(0,0%,100%,0) 99.99%,rgba(74,72,193,0) 100%);background-repeat:no-repeat;content:"";height:40px;left:50%;position:absolute;top:0;transform:translateX(-50%);width:100%}.cvco-app .cvco-conversation__item:first-child .cvco-divider{margin-top:0}.cvco-app .cvco-divider--type-time-indicator{padding-bottom:20px;padding-top:60px}.cvco-app .cvco-divider--type-time-indicator:before{display:none}.cvco-app .cvco-divider__graphic{border-radius:5px;height:32px;left:50%;position:absolute;top:40px;transform:translate(-50%,-60%);width:32px}.cvco-app .cvco-divider__graphic .cvco-avatar,.cvco-app .cvco-divider__graphic .cvco-icon,.cvco-app .cvco-divider__graphic .cvco-icon svg{height:100%;width:100%}.cvco-app .cvco-divider__body{align-items:center;display:flex;flex-direction:column;gap:5px;justify-content:center;max-width:300px;text-align:center}.cvco-app .cvco-divider__body .cvco-divider__title{font-size:12px;font-weight:700;margin:0}.cvco-app .cvco-divider__body .cvco-divider__description{font-size:12px;line-height:1.5}.cvco-app .cvco-divider__body .cvco-button{font-size:inherit;padding:0;width:-moz-fit-content;width:fit-content}.cvco-app .cvco-divider__time{align-items:center;display:flex;flex-direction:column;font-weight:400;gap:2.5px;justify-content:center;margin:0}.cvco-app .cvco-divider__time .cvco-divider__time--date,.cvco-app .cvco-divider__time .cvco-divider__time--time{display:block;line-height:1.25}.cvco-app .cvco-divider__time .cvco-divider__time--date{font-size:12px;font-weight:700}.cvco-app .cvco-divider__time .cvco-divider__time--time{font-size:16px}.cvco-app .cvco-loader{animation:cvco-fadeIn .3s linear;gap:5px;height:20px;justify-content:flex-start;padding:2.5px 5px}.cvco-app .cvco-loader__part{animation-delay:.12s;animation-direction:normal;animation-duration:.6s;animation-fill-mode:forwards;animation-iteration-count:infinite;animation-name:cvco-loader;animation-timing-function:ease;background-color:currentcolor;border-radius:50%;height:100%;transform:scaleY(.45);width:6.666px}.cvco-app .cvco-loader__part.cvco-one{animation-delay:.12s}.cvco-app .cvco-loader__part.cvco-two{animation-delay:.24s}.cvco-app .cvco-loader__part.cvco-three{animation-delay:.36s}.cvco-app .cvco-loader__part.cvco-four{animation-delay:.48s}.cvco-app .cvco-message{display:flex;flex-flow:row wrap;gap:5px;width:80%}.cvco-app .cvco-message.cvco-message--type-suggestions,.cvco-app .cvco-unstarted-wrapper--window .cvco-message{width:100%}.cvco-app .cvco-message+.cvco-message{margin-top:10px}.cvco-app .cvco-message--source-inf
+        
+        <link type="text/css" rel="stylesheet" href="https://codengo.bureauveritas.fr/portal/css/cdr-lib.min-8.8.46.css.gz">
+        <link type="text/css" rel="stylesheet" href="https://codengo.bureauveritas.fr/portal/css/cdr-application.min-8.8.46.css.gz">
+        <script src="https://codengo.bureauveritas.fr/portal/js/cdr-lib.min-8.8.46.js.gz"></script>
+	<script type="text/javascript">/*! axe v4.13.0
+ * Copyright (c) 2015 - 2026 Deque Systems, Inc.
+ *
+ * Your use of this Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ *
+ * This entire copyright notice must appear in every copy of this file you
+ * distribute or in any file that contains substantial portions of this source
+ * code.
+ */
+!function i(window){var q=window,document=window.document;function te(e){return(te="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e})(e)}var axe=axe||{},c=(axe.version="4.13.0","function"==typeof define&&define.amd&&define("axe-core",[],function(){return axe}),"object"===("undefined"==typeof module?"undefined":te(module))&&module.exports&&"function"==typeof i.toString&&(axe.source="("+i.toString()+')(typeof window === "object" ? window : this);',module.exports=axe),"function"==typeof window.getComputedStyle&&(window.axe=axe),["precision","format","inGamut"]),l=["space"],M=["algorithm"],I=["method"],B=["maxDeltaE","deltaEMethod","steps","maxSteps"],j=["node"],L=["relatedNodes"],V=["node"],z=["variant"],G=["matches"],$=["chromium"],H=["noImplicit"],U=["noPresentational"],W=["node"],Y=["environmentData"],K=["environmentData"],X=["environmentData"],Z=["environmentData"],J=["environmentData"];function Q(){var m,e="function"==typeof Symbol?Symbol:{},t=e.iterator||"@@iterator",n=e.toStringTag||"@@toStringTag";function r(e,t,n,r){var a,o,i,l,u,s,c,d,p,t=t&&t.prototype instanceof g?t:g,t=Object.create(t.prototype);return ee(t,"_invoke",(a=e,o=n,c=r||[],d=!1,p={p:s=0,n:0,v:m,a:f,f:f.bind(m,4),d:function(e,t){return i=e,l=0,u=m,p.n=t,h}},function(e,t,n){if(1<s)throw TypeError("Generator is already running");for(d&&1===t&&f(t,n),l=t,u=n;(v=l<2?m:u)||!d;){i||(l?l<3?(1<l&&(p.n=-1),f(l,u)):p.n=u:p.v=u);try{if(s=2,i){if(v=i[e=l?e:"next"]){if(!(v=v.call(i,u)))throw TypeError("iterator result is not an object");if(!v.done)return v;u=v.value,l<2&&(l=0)}else 1===l&&(v=i.return)&&v.call(i),l<2&&(u=TypeError("The iterator does not provide a '"+e+"' method"),l=1);i=m}else if((v=(d=p.n<0)?u:a.call(o,p))!==h)break}catch(e){i=m,l=1,u=e}finally{s=1}}return{value:v,done:d}}),!0),t;function f(e,t){for(l=e,u=t,v=0;!d&&s&&!n&&v<c.length;v++){var n,r=c[v],a=p.p,o=r[2];3<e?(n=o===t)&&(u=r[(l=r[4])?5:l=3],r[4]=r[5]=m):r[0]<=a&&((n=e<2&&a<r[1])?(l=0,p.v=t,p.n=r[1]):a<o&&(n=e<3||r[0]>t||o<t)&&(r[4]=e,r[5]=t,p.n=o,l=0))}if(n||1<e)return h;throw d=!0,t}}var h={};function g(){}function a(){}function o(){}var v=Object.getPrototypeOf,e=[][t]?v(v([][t]())):(ee(v={},t,function(){return this}),v),i=o.prototype=g.prototype=Object.create(e);function l(e){return Object.setPrototypeOf?Object.setPrototypeOf(e,o):(e.__proto__=o,ee(e,n,"GeneratorFunction")),e.prototype=Object.create(i),e}return ee(i,"constructor",a.prototype=o),ee(o,"constructor",a),ee(o,n,a.displayName="GeneratorFunction"),ee(i),ee(i,n,"Generator"),ee(i,t,function(){return this}),ee(i,"toString",function(){return"[object Generator]"}),(Q=function(){return{w:r,m:l}})()}function ee(e,t,n,r){var o=Object.defineProperty;try{o({},"",{})}catch(e){o=0}(ee=function(e,t,n,r){function a(t,n){ee(e,t,function(e){return this._invoke(t,n,e)})}t?o?o(e,t,{value:n,enumerable:!r,configurable:!r,writable:!r}):e[t]=n:(a("next",0),a("throw",1),a("return",2))})(e,t,n,r)}function ne(e,t,n,r,a,o,i){try{var l=e[o](i),u=l.value}catch(e){return n(e)}l.done?t(u):Promise.resolve(u).then(r,a)}function re(l){return function(){var e=this,i=arguments;return new Promise(function(t,n){var r=l.apply(e,i);function a(e){ne(r,t,n,a,o,"next",e)}function o(e){ne(r,t,n,a,o,"throw",e)}a(void 0)})}}function ae(e){return De(e)||fe(e)||Ce(e)||we()}function oe(e){var n="function"==typeof Map?new Map:void 0;return function(e){if(null===e||!(t=>{try{return-1!==Function.toString.call(t).indexOf("[native code]")}catch(e){return"function"==typeof t}})(e))return e;if("function"!=typeof e)throw new TypeError("Super expression must either be null or a function");if(void 0!==n){if(n.has(e))return n.get(e);n.set(e,t)}function t(){return le(e,arguments,ce(this).constructor)}return t.prototype=Object.create(e.prototype,{constructor:{value:t,enumerable:!1,writable:!0,configurable:!0}}),pe(t,e)}(e)}function ie(e,t,n){return(t=Fe(t))in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function le(e,t,n){var r;return se()?Reflect.construct.apply(null,arguments):((r=[null]).push.apply(r,t),t=new(e.bind.apply(e,r)),n&&pe(t,n.prototype),t)}function v(e,t){if(null==e)return{};var n,r=((e,t)=>{if(null==e)return{};var n,r={};for(n in e)!{}.hasOwnProperty.call(e,n)||-1!==t.indexOf(n)||(r[n]=e[n]);return r})(e,t);if(Object.getOwnPropertySymbols)for(var a=Object.getOwnPropertySymbols(e),o=0;o<a.length;o++)n=a[o],-1===t.indexOf(n)&&{}.propertyIsEnumerable.call(e,n)&&(r[n]=e[n]);return r}function ue(e,t,n){t=ce(t);var r=e,t=se()?Reflect.construct(t,n||[],ce(e).constructor):t.apply(e,n);if(t&&("object"==te(t)||"function"==typeof t))return t;if(void 0!==t)throw new TypeError("Derived constructors may only return object or undefined");if(void 0!==(t=r))return t;throw new ReferenceError("this hasn't been initialised - super() hasn't been called")}function se(){try{var e=!Boolean.prototype.valueOf.call(Reflect.construct(Boolean,[],function(){}))}catch(e){}return(se=function(){return!!e})()}function ce(e){return(ce=Object.setPrototypeOf?Object.getPrototypeOf.bind():function(e){return e.__proto__||Object.getPrototypeOf(e)})(e)}function de(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function");e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,writable:!0,configurable:!0}}),Object.defineProperty(e,"prototype",{writable:!1}),t&&pe(e,t)}function pe(e,t){return(pe=Object.setPrototypeOf?Object.setPrototypeOf.bind():function(e,t){return e.__proto__=t,e})(e,t)}function h(){return(h=Object.assign?Object.assign.bind():function(e){for(var t=1;t<arguments.length;t++){var n,r=arguments[t];for(n in r)!{}.hasOwnProperty.call(r,n)||(e[n]=r[n])}return e}).apply(null,arguments)}function w(e){return(e=>{if(Array.isArray(e))return ke(e)})(e)||fe(e)||Ce(e)||(()=>{throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")})()}function fe(e){if("undefined"!=typeof Symbol&&null!=e[Symbol.iterator]||null!=e["@@iterator"])return Array.from(e)}function me(e,t,n){ge(e,t),t.set(e,n)}function he(e,t){ge(e,t),t.add(e)}function ge(e,t){if(t.has(e))throw new TypeError("Cannot initialize the same private elements twice on an object")}function ve(e,t){return e.get(ye(e,t))}function be(e,t,n){e.set(ye(e,t),n)}function ye(e,t,n){if("function"==typeof e?e===t:e.has(t))return arguments.length<3?t:n;throw new TypeError("Private element is not present on this object")}function D(e,t){return De(e)||((e,t)=>{var n=null==e?null:"undefined"!=typeof Symbol&&e[Symbol.iterator]||e["@@iterator"];if(null!=n){var r,a,o,i,l=[],u=!0,s=!1;try{if(o=(n=n.call(e)).next,0===t){if(Object(n)!==n)return;u=!1}else for(;!(u=(r=o.call(n)).done)&&(l.push(r.value),l.length!==t);u=!0);}catch(e){s=!0,a=e}finally{try{if(!u&&null!=n.return&&(i=n.return(),Object(i)!==i))return}finally{if(s)throw a}}return l}})(e,t)||Ce(e,t)||we()}function we(){throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}function De(e){if(Array.isArray(e))return e}function xe(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function Ee(e,t){for(var n=0;n<t.length;n++){var r=t[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,Fe(r.key),r)}}function Ae(e,t,n){return t&&Ee(e.prototype,t),n&&Ee(e,n),Object.defineProperty(e,"prototype",{writable:!1}),e}function Fe(e){e=((e,t)=>{if("object"!=te(e)||!e)return e;var n=e[Symbol.toPrimitive];if(void 0===n)return("string"===t?String:Number)(e);if(n=n.call(e,t||"default"),"object"==te(n))throw new TypeError("@@toPrimitive must return a primitive value.");return n})(e,"string");return"symbol"==te(e)?e:e+""}function x(e,t){var n,r,a,o,i="undefined"!=typeof Symbol&&e[Symbol.iterator]||e["@@iterator"];if(i)return a=!(r=!0),{s:function(){i=i.call(e)},n:function(){var e=i.next();return r=e.done,e},e:function(e){a=!0,n=e},f:function(){try{r||null==i.return||i.return()}finally{if(a)throw n}}};if(Array.isArray(e)||(i=Ce(e))||t&&e&&"number"==typeof e.length)return i&&(e=i),o=0,{s:t=function(){},n:function(){return o>=e.length?{done:!0}:{done:!1,value:e[o++]}},e:function(e){throw e},f:t};throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}function Ce(e,t){var n;if(e)return"string"==typeof e?ke(e,t):"Map"===(n="Object"===(n={}.toString.call(e).slice(8,-1))&&e.constructor?e.constructor.name:n)||"Set"===n?Array.from(e):"Arguments"===n||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)?ke(e,t):void 0}function ke(e,t){(null==t||t>e.length)&&(t=e.length);for(var n=0,r=Array(t);n<t;n++)r[n]=e[n];return r}function te(e){return(te="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e})(e)}var Re=void 0,Ne=void 0,Te=void 0,Se=void 0,Oe=void 0,_e=void 0,Pe=void 0,Me=void 0,Ie=void 0,Be=void 0,je=void 0;function e(e,t){return function(){return t||e((t={exports:{}}).exports,t),t.exports}}function Le(e,t){for(var n in t)He(e,n,{get:t[n],enumerable:!0})}function qe(t,n,r){if(n&&"object"===te(n)||"function"==typeof n){var a,o=x(Ye(n));try{for(o.s();!(a=o.n()).done;)(()=>{var e=a.value;We.call(t,e)||"default"===e||He(t,e,{get:function(){return n[e]},enumerable:!(r=Ke(n,e))||r.enumerable})})()}catch(e){o.e(e)}finally{o.f()}}return t}function Ve(e){return qe((t=He(null!=e?$e(Ue(e)):{},"default",e&&e.__esModule&&"default"in e?{get:function(){return e.default},enumerable:!0}:{value:e,enumerable:!0}),He(t,"__esModule",{value:!0})),e);var t}function ze(e,t,n){e=e,t="symbol"!==te(t)?t+"":t,n=n,t in e?He(e,t,{enumerable:!0,configurable:!0,writable:!0,value:n}):e[t]=n}var Ge,$e=Object.create,He=Object.defineProperty,Ue=Object.getPrototypeOf,We=Object.prototype.hasOwnProperty,Ye=Object.getOwnPropertyNames,Ke=Object.getOwnPropertyDescriptor,Xe=e(function(e,t){var n;n=function(){function u(e){return"function"==typeof e}var n=Array.isArray||function(e){return"[object Array]"===Object.prototype.toString.call(e)},r=0,t=void 0,a=void 0,i=function(e,t){d[r]=e,d[r+1]=t,2===(r+=2)&&(a?a(p):I())};var e=void 0!==window?window:void 0,o=e||{},o=o.MutationObserver||o.WebKitMutationObserver,l="undefined"==typeof self&&"undefined"!=typeof process&&"[object process]"==={}.toString.call(process),s="undefined"!=typeof Uint8ClampedArray&&"undefined"!=typeof importScripts&&"undefined"!=typeof MessageChannel;function c(){var e=setTimeout;return function(){return e(p,1)}}var d=new Array(1e3);function p(){for(var e=0;e<r;e+=2)(0,d[e])(d[e+1]),d[e]=void 0,d[e+1]=void 0;r=0}function f(){try{var e=Function("return this")().require("vertx");return void 0!==(t=e.runOnLoop||e.runOnContext)?function(){t(p)}:c()}catch(e){return c()}}var m,h,g,I=void 0;function v(e,t){var n,r=this,a=new this.constructor(w),o=(void 0===a[y]&&O(a),r._state);return o?(n=arguments[o-1],i(function(){return T(o,a,n,r._result)})):R(r,a,e,t),a}function b(e){var t;return e&&"object"===te(e)&&e.constructor===this?e:(F(t=new this(w),e),t)}var I=l?function(){return process.nextTick(p)}:o?(h=0,l=new o(p),g=document.createTextNode(""),l.observe(g,{characterData:!0}),function(){g.data=h=++h%2}):s?((m=new MessageChannel).port1.onmessage=p,function(){return m.port2.postMessage(0)}):(void 0===e?f:c)(),y=Math.random().toString(36).substring(2);function w(){}var D=void 0,x=1,E=2;function B(e,r,a){i(function(t){var n=!1,e=((e,t,n,r)=>{try{e.call(t,n,r)}catch(e){return e}})(a,r,function(e){n||(n=!0,(r!==e?F:C)(t,e))},function(e){n||(n=!0,k(t,e))},t._label);!n&&e&&(n=!0,k(t,e))},e)}function A(e,t,n){var r,a;t.constructor===e.constructor&&n===v&&t.constructor.resolve===b?(r=e,(a=t)._state===x?C(r,a._result):a._state===E?k(r,a._result):R(a,void 0,function(e){return F(r,e)},function(e){return k(r,e)})):void 0!==n&&u(n)?B(e,t,n):C(e,t)}function F(t,e){if(t===e)k(t,new TypeError("You cannot resolve a promise with itself"));else if(r=te(n=e),null===n||"object"!==r&&"function"!==r)C(t,e);else{n=void 0;try{n=e.then}catch(e){return void k(t,e)}A(t,e,n)}var n,r}function j(e){e._onerror&&e._onerror(e._result),N(e)}function C(e,t){e._state===D&&(e._result=t,e._state=x,0!==e._subscribers.length)&&i(N,e)}function k(e,t){e._state===D&&(e._state=E,e._result=t,i(j,e))}function R(e,t,n,r){var a=e._subscribers,o=a.length;e._onerror=null,a[o]=t,a[o+x]=n,a[o+E]=r,0===o&&e._state&&i(N,e)}function N(e){var t=e._subscribers,n=e._state;if(0!==t.length){for(var r,a=void 0,o=e._result,i=0;i<t.length;i+=3)r=t[i],a=t[i+n],r?T(n,r,a,o):a(o);e._subscribers.length=0}}function T(e,t,n,r){var a=u(n),o=void 0,i=void 0,l=!0;if(a){try{o=n(r)}catch(e){l=!1,i=e}if(t===o)return void k(t,new TypeError("A promises callback cannot return that same promise."))}else o=r;t._state===D&&(a&&l?F(t,o):!1===l?k(t,i):e===x?C(t,o):e===E&&k(t,o))}var S=0;function O(e){e[y]=S++,e._state=void 0,e._result=void 0,e._subscribers=[]}_.prototype._enumerate=function(e){for(var t=0;this._state===D&&t<e.length;t++)this._eachEntry(e[t],t)},_.prototype._eachEntry=function(t,e){var n=this._instanceConstructor,r=n.resolve;if(r===b){var a,o=void 0,i=void 0,l=!1;try{o=t.then}catch(e){l=!0,i=e}o===v&&t._state!==D?this._settledAt(t._state,e,t._result):"function"!=typeof o?(this._remaining--,this._result[e]=t):n===P?(a=new n(w),l?k(a,i):A(a,t,o),this._willSettleAt(a,e)):this._willSettleAt(new n(function(e){return e(t)}),e)}else this._willSettleAt(r(t),e)},_.prototype._settledAt=function(e,t,n){var r=this.promise;r._state===D&&(this._remaining--,e===E?k(r,n):this._result[t]=n),0===this._remaining&&C(r,this._result)},_.prototype._willSettleAt=function(e,t){var n=this;R(e,void 0,function(e){return n._settledAt(x,t,e)},function(e){return n._settledAt(E,t,e)})};var L=_;function _(e,t){this._instanceConstructor=e,this.promise=new e(w),this.promise[y]||O(this.promise),n(t)?(this.length=t.length,this._remaining=t.length,this._result=new Array(this.length),0!==this.length&&(this.length=this.length||0,this._enumerate(t),0!==this._remaining)||C(this.promise,this._result)):k(this.promise,new Error("Array Methods must be provided an Array"))}M.prototype.catch=function(e){return this.then(null,e)},M.prototype.finally=function(t){var n=this.constructor;return u(t)?this.then(function(e){return n.resolve(t()).then(function(){return e})},function(e){return n.resolve(t()).then(function(){throw e})}):this.then(t,t)};var P=M;function M(e){if(this[y]=S++,this._result=this._state=void 0,this._subscribers=[],w!==e){if("function"!=typeof e)throw new TypeError("You must pass a resolver function as the first argument to the promise constructor");if(!(this instanceof M))throw new TypeError("Failed to construct 'Promise': Please use the 'new' operator, this object constructor cannot be called as a function.");var t=this;try{e(function(e){F(t,e)},function(e){k(t,e)})}catch(e){k(t,e)}}}return P.prototype.then=v,P.all=function(e){return new L(this,e).promise},P.race=function(a){var o=this;return n(a)?new o(function(e,t){for(var n=a.length,r=0;r<n;r++)o.resolve(a[r]).then(e,t)}):new o(function(e,t){return t(new TypeError("You must pass an array to race."))})},P.resolve=b,P.reject=function(e){var t=new this(w);return k(t,e),t},P._setScheduler=function(e){a=e},P._setAsap=function(e){i=e},P._asap=i,P.polyfill=function(){var e=void 0;if(void 0!==q)e=q;else if("undefined"!=typeof self)e=self;else try{e=Function("return this")()}catch(e){throw new Error("polyfill failed because global object is unavailable in this environment")}var t=e.Promise;if(t){var n=null;try{n=Object.prototype.toString.call(t.resolve())}catch(e){}if("[object Promise]"===n&&!t.cast)return}e.Promise=P},P.Promise=P},"object"===te(e=e)&&void 0!==t?t.exports=n():"function"==typeof define&&define.amd?define(n):e.ES6Promise=n()}),Ze=e(function(l){var t,n,r=1e5,p=(t=Object.prototype.toString,n=Object.prototype.hasOwnProperty,{Class:function(e){return t.call(e).replace(/^\[object *|\]$/g,"")},HasProperty:function(e,t){return t in e},HasOwnProperty:function(e,t){return n.call(e,t)},IsCallable:function(e){return"function"==typeof e},ToInt32:function(e){return e>>0},ToUint32:function(e){return e>>>0}}),f=Math.LN2,m=Math.abs,h=Math.floor,g=Math.log,v=Math.min,b=Math.pow,I=Math.round;function a(e,t,n){return e<t?t:n<e?n:e}var o,e,i,u,s,c,d,y,w,D,x,E=Object.getOwnPropertyNames||function(e){if(e!==Object(e))throw new TypeError("Object.getOwnPropertyNames called on non-object");var t,n=[];for(t in e)p.HasOwnProperty(e,t)&&n.push(t);return n};function A(e){if(E&&o)for(var t=E(e),n=0;n<t.length;n+=1)o(e,t[n],{value:e[t[n]],writable:!1,enumerable:!1,configurable:!1})}function B(n){if(o){if(n.length>r)throw new RangeError("Array too large for polyfill");for(var e=0;e<n.length;e+=1)(t=>{o(n,t,{get:function(){return n._getter(t)},set:function(e){n._setter(t,e)},enumerable:!0,configurable:!1})})(e)}}function F(e,t){t=32-t;return e<<t>>t}function C(e,t){t=32-t;return e<<t>>>t}function j(e){return[255&e]}function L(e){return F(e[0],8)}function q(e){return[255&e]}function k(e){return C(e[0],8)}function V(e){return[(e=I(Number(e)))<0?0:255<e?255:255&e]}function z(e){return[e>>8&255,255&e]}function G(e){return F(e[0]<<8|e[1],16)}function $(e){return[e>>8&255,255&e]}function H(e){return C(e[0]<<8|e[1],16)}function U(e){return[e>>24&255,e>>16&255,e>>8&255,255&e]}function W(e){return F(e[0]<<24|e[1]<<16|e[2]<<8|e[3],32)}function Y(e){return[e>>24&255,e>>16&255,e>>8&255,255&e]}function K(e){return C(e[0]<<24|e[1]<<16|e[2]<<8|e[3],32)}function R(e,t,n){var r,a,o,i,l,u,s,c=(1<<t-1)-1;function d(e){var t=h(e),e=e-t;return!(e<.5)&&(.5<e||t%2)?t+1:t}for(e!=e?(a=(1<<t)-1,o=b(2,n-1),r=0):e===1/0||e===-1/0?(a=(1<<t)-1,r=e<(o=0)?1:0):0===e?r=1/e==-1/(o=a=0)?1:0:(r=e<0,(e=m(e))>=b(2,1-c)?(a=v(h(g(e)/f),1023),2<=(o=d(e/b(2,a)*b(2,n)))/b(2,n)&&(a+=1,o=1),c<a?(a=(1<<t)-1,o=0):(a+=c,o-=b(2,n))):(a=0,o=d(e/b(2,1-c-n)))),l=[],i=n;i;--i)l.push(o%2?1:0),o=h(o/2);for(i=t;i;--i)l.push(a%2?1:0),a=h(a/2);for(l.push(r?1:0),l.reverse(),u=l.join(""),s=[];u.length;)s.push(parseInt(u.substring(0,8),2)),u=u.substring(8);return s}function N(e,t,n){for(var r,a,o,i,l,u,s=[],c=e.length;c;--c)for(a=e[c-1],r=8;r;--r)s.push(a%2?1:0),a>>=1;return s.reverse(),u=s.join(""),o=(1<<t-1)-1,i=parseInt(u.substring(0,1),2)?-1:1,l=parseInt(u.substring(1,1+t),2),u=parseInt(u.substring(1+t),2),l===(1<<t)-1?0===u?1/0*i:NaN:0<l?i*b(2,l-o)*(1+u/b(2,n)):0!==u?i*b(2,-(o-1))*(u/b(2,n)):i<0?-0:0}function X(e){return N(e,11,52)}function Z(e){return R(e,11,52)}function J(e){return N(e,8,23)}function Q(e){return R(e,8,23)}function T(e){if((e=p.ToInt32(e))<0)throw new RangeError("ArrayBuffer size is not a small enough positive integer");
 ```

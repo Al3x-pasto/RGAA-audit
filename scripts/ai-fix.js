@@ -11,7 +11,7 @@ const root = path.resolve(__dirname, '..');
  * @param {string} [apiKey] - Clé API Mistral (optionnelle)
  * @returns {Promise<object>} Prompts générés (global + pages)
  */
-export async function generateFixes(apiKey) {
+export async function generateFixes(apiKey, { callAi = true } = {}) {
   const data = JSON.parse(fs.readFileSync(path.join(root, 'results', 'results.json'), 'utf8'));
   const tpl = fs.readFileSync(path.join(root, 'prompts', 'audit-prompt.md'), 'utf8');
   const mapPath = path.join(root, 'data', 'axe-to-rgaa.json');
@@ -21,7 +21,14 @@ export async function generateFixes(apiKey) {
   fs.mkdirSync(promptsDir, { recursive: true });
   fs.mkdirSync(fixesDir, { recursive: true });
 
-  const key = apiKey || process.env.MISTRAL_API_KEY;
+  for (const file of fs.readdirSync(promptsDir)) {
+    if (/^page-\d+\.md$/.test(file)) fs.unlinkSync(path.join(promptsDir, file));
+  }
+  for (const file of fs.readdirSync(fixesDir)) {
+    if (/^page-\d+\.md$/.test(file)) fs.unlinkSync(path.join(fixesDir, file));
+  }
+
+  const key = callAi ? (apiKey || process.env.MISTRAL_API_KEY) : null;
   const prompts = [];
   const fixes = [];
 
@@ -76,8 +83,10 @@ ${item.samples.join('\n\n')}
   }
 
   globalPrompt += `---
-## Instructions de correction
-Ne traite que les erreurs axe-core listées ci-dessus. Regroupe les corrections communes, précise les pages ou éléments concernés et donne pour chacun des étapes directement applicables au code source. Utilise un exemple de code minimal uniquement lorsqu'il est justifié par les extraits. N'inclus aucun audit supplémentaire, conseil générique, feuille CSS globale, script automatique, résumé ou explication longue. Si un extrait ne permet pas de confirmer une correction fiable, indique ce qui doit être vérifié sans inventer de solution.
+## Consignes d'action globale pour le développeur / l'IA :
+1. Fournis une feuille de style CSS corrective transversale (contrastes, focus visible, focus-within).
+2. Fournis les composants réutilisables corrigés (Images avec alt pertinent, balisage formulaire avec labels, liens explicites, repères ARIA).
+3. Donne un script JS de correction automatique si applicable pour les éléments dynamiques.
 `;
 
   fs.writeFileSync(path.join(promptsDir, 'global-prompt.md'), globalPrompt);
@@ -92,7 +101,7 @@ Ne traite que les erreurs axe-core listées ci-dessus. Regroupe les corrections 
   // 2. Prompts par page
   for (const p of data.pages.filter(p => p.violations.length)) {
     const htmlPath = path.join(root, 'results', 'html', `page-${p.id}.html`);
-    const html = fs.existsSync(htmlPath) ? fs.readFileSync(htmlPath, 'utf8').slice(0, 30000) : '';
+    const html = fs.existsSync(htmlPath) ? fs.readFileSync(htmlPath, 'utf8').slice(0, 30000) : '';  
     const viol = p.violations.map(v => `- ${v.id} (${v.impact}) [RGAA ${rgaaMap[v.id]?.join(', ') || 'N/A'}] : ${v.help}\n  ex: ${v.nodes[0]?.html?.slice(0, 200)}`).join('\n');
     const prompt = `${tpl}\n\n## Page : ${p.url}\n\n## Violations détectées par axe-core\n${viol}\n\n## Code HTML\n\`\`\`html\n${html}\n\`\`\`\n`;
     

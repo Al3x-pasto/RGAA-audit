@@ -55,6 +55,11 @@ app.post('/api/scan', async (req, res) => {
         client.write(`data: ${JSON.stringify(msg)}\n\n`);
       }
     });
+    const { generateFixes } = await import('./scripts/ai-fix.js');
+    await generateFixes(undefined, { callAi: false });
+    for (const client of scanClients) {
+      client.write(`data: ${JSON.stringify({ type: 'status', data: 'Prompts actualisés' })}\n\n`);
+    }
   } catch (e) {
     for (const client of scanClients) {
       client.write(`data: ${JSON.stringify({ type: 'error', data: e.message })}\n\n`);

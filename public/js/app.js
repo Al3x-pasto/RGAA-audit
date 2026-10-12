@@ -163,6 +163,7 @@
           $('#org-email').value = cfg.organisation.email || '';
           $('#org-adresse').value = cfg.organisation.adresse || '';
         }
+        window.RgaaI18n?.refresh();
       }
       // Setup form handler
       const form = $('#audit-form');
@@ -250,7 +251,7 @@
     }
 
     html += `<div class="mt-lg text-sm text-muted">
-      <p>Dernière analyse : ${results.date ? new Date(results.date).toLocaleString('fr-FR') : 'N/A'}</p>
+      <p>Dernière analyse : ${results.date ? new Date(results.date).toLocaleString(document.documentElement.lang === 'en' ? 'en-GB' : 'fr-FR') : 'N/A'}</p>
       <p>Site : ${escHtml(results.startUrl || '')}</p>
     </div>`;
 
@@ -403,7 +404,7 @@
   function addLogEntry(container, text, cls = '') {
     const entry = document.createElement('div');
     entry.className = `scan-log-entry ${cls}`;
-    entry.textContent = `[${new Date().toLocaleTimeString('fr-FR')}] ${text}`;
+    entry.textContent = `[${new Date().toLocaleTimeString(document.documentElement.lang === 'en' ? 'en-GB' : 'fr-FR')}] ${text}`;
     container.appendChild(entry);
   }
 

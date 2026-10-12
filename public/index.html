@@ -34,11 +34,14 @@
           ☰
         </button>
         <h1>
-          <span class="brand-emblem" aria-hidden="true">A11Y</span>
-          RGAA Audit Pro
+          <a class="brand-home-link" href="#dashboard">
+            <span class="brand-emblem" aria-hidden="true">A11Y</span>
+            RGAA Audit Pro
+          </a>
         </h1>
       </div>
       <div class="header-actions">
+        <button class="theme-toggle language-toggle" id="language-toggle" type="button" aria-label="Passer à l'anglais" title="Passer à l'anglais">EN</button>
         <button class="theme-toggle" id="theme-toggle" aria-label="Basculer le thème clair/sombre" title="Basculer le thème">
           Thème
         </button>
@@ -323,11 +326,11 @@
         </div>
 
         <!-- Confidentialité & Sécurité -->
-        <div class="card">
-          <h3 class="card-title" style="font-size:1.2rem;margin-bottom:0.75rem">Confidentialité &amp; Traitement local</h3>
-          <p class="text-sm" style="line-height:1.7">
-            <strong>100% Souverain et local :</strong> L'ensemble de l'audit s'exécute directement sur votre environnement Node.js. Aucune donnée, aucun code source et aucune adresse ne sont transférés à des serveurs tiers. Les requêtes IA optionnelles ne sont envoyées que si vous fournissez explicitement votre propre clé API (ex. Mistral AI).
-          </p>
+        <div class="privacy-highlight" role="note" aria-labelledby="privacy-title">
+          <span class="privacy-label">Confidentialité</span>
+          <h3 class="privacy-title" id="privacy-title">Vos données restent dans votre instance</h3>
+          <p class="privacy-summary">Le scan, les résultats et les rapports sont traités et enregistrés sur le serveur qui héberge cette application.</p>
+          <p class="privacy-detail">Aucune donnée d’audit n’est envoyée à un service tiers par défaut. Si vous configurez votre propre clé Mistral, les prompts de correction sont transmis à Mistral lorsque vous demandez une correction IA.</p>
         </div>
       </section>
     </main>
@@ -399,6 +402,7 @@
     </div>
   </div>
 
+  <script src="/js/i18n.js"></script>
   <script src="/js/app.js"></script>
 </body>
 </html>

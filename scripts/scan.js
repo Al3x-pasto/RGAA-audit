@@ -34,6 +34,8 @@ export async function runScan(config, onProgress = () => {}) {
   const browser = await chromium.launch();
   const ctx = await browser.newContext({ locale: 'fr-FR' });
   const page = await ctx.newPage();
+  const cdp = await ctx.newCDPSession(page);
+  await cdp.send('Page.setBypassCSP', { enabled: true });
 
   try {
     while (queue.length && pages.length < cfg.maxPages) {
@@ -45,11 +47,12 @@ export async function runScan(config, onProgress = () => {}) {
       onProgress({ type: 'scanning', data: { url, current: pages.length + 1, max: cfg.maxPages } });
 
       try {
-        const resp = await page.goto(url, { waitUntil: 'networkidle', timeout: 45000 });
+        const resp = await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 45000 });
         if (!resp || !resp.ok()) {
           onProgress({ type: 'warn', data: `Skip ${url} (${resp?.status()})` });
           continue;
         }
+        await page.waitForLoadState('networkidle', { timeout: 5000 }).catch(() => {});
         await page.addScriptTag({ content: axeSource });
         const axeResult = await page.evaluate(
           (tags) => axe.run(document, { runOnly: { type: 'tag', values: tags } }),
@@ -87,6 +90,10 @@ export async function runScan(config, onProgress = () => {}) {
     }
   } finally {
     await browser.close();
+  }
+
+  if (pages.length === 0) {
+    throw new Error(`Aucune page n'a pu être analysée sur ${startUrl}. Le site peut bloquer les accès automatisés ou renvoyer une erreur HTTP.`);
   }
 
   const results = { date: new Date().toISOString(), startUrl, pages };
